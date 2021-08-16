@@ -6,43 +6,15 @@
    <meta name="description" content="Xisen - Creative HTML5 Template for Saas, Startup & Agency">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Title -->
-<title>Home 7 || Xisen - Creative HTML5 Template for Saas, Startup & Agency</title>
+    <!-- Title -->
+    <title>Home 7 || Xisen - Creative HTML5 Template for Saas, Startup & Agency</title>
 
-<!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="assets/img/icon.png">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/icon.png">
 
-
-<!-- CSS Here -->
-   <!-- Aos.css -->
-   <link rel="stylesheet" href="assets/css/aos.css">
-   <!-- Slick Slider.css -->
-   <link rel="stylesheet" href="assets/css/slick.css">
-   <!-- Magnific Popup.css -->
-   <link rel="stylesheet" href="assets/css/magnific-popup.css">
-   <!-- Slick Nav.css -->
-   <link rel="stylesheet" href="assets/css/slicknav-1.0.10.min.css">
-   <!-- Animated.css -->
-   <link rel="stylesheet" href="assets/css/animate.min.css">
-   <!-- Custom Animated.css -->
-   <link rel="stylesheet" href="assets/css/custom-animation.css">
-   <!-- Owl.carousel.css -->
-   <link rel="stylesheet" href="assets/css/owl.carousel-2.3.4.min.css">
-   <!-- Fontawesome.css -->
-   <link rel="stylesheet" href="assets/css/fontawesome-free-5.12.0.min.css">
-   <!-- Themify Icon.css -->
-   <link rel="stylesheet" href="assets/css/themify-icons.css">
-   <!-- Bootstrap.css -->
-   <link rel="stylesheet" href="assets/css/bootstrap-4.3.1.min.css">
-   <!-- Default.css -->
-   <link rel="stylesheet" href="assets/css/default.css">
-   <!-- Style.css -->
-   <link rel="stylesheet" href="assets/css/main.css">
-   <!-- Responsive.css -->
-   <link rel="stylesheet" href="assets/css/responsive.css">
-
+    <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
     <!-- preloader  -->
         <div id="preloader">
             <div id="ctn-preloader" class="ctn-preloader">
@@ -92,7 +64,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-2 col-6">
                         <div class="site-logo">
-                            <a href="index.html"><img src="assets/img/site-logo/logo.png" alt=""></a>
+                            <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo/logo.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-6 d-block d-lg-none static">
@@ -260,12 +232,12 @@
 <!-- Start Slider Area -->
     <section class="slider-area header-bg fix">
         <div class="slider-shape">
-            <img src="assets/img/shape/shape1.png" alt="" class="shape shape-1">
-            <img src="assets/img/shape/shape2.png" alt="" class="shape shape-2">
-            <img src="assets/img/shape/shape3.png" alt="" class="shape shape-3">
-            <img src="assets/img/shape/shape4.png" alt="" class="shape shape-4">
-            <img src="assets/img/shape/shape5.png" alt="" class="shape shape-5">
-            <img src="assets/img/shape/shape6.png" alt="" class="shape shape-6">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape1.png" alt="" class="shape shape-1">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape2.png" alt="" class="shape shape-2">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape3.png" alt="" class="shape shape-3">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape4.png" alt="" class="shape shape-4">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape5.png" alt="" class="shape shape-5">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape6.png" alt="" class="shape shape-6">
         </div>
         <div class="single-slider slider-height-7 d-flex align-items-center">
             <div class="container">
@@ -279,7 +251,7 @@
                     </div>
                     <div class="col-xl-6 offset-xl-1 col-lg-6 d-none d-md-block" >
                         <div class="slider-img mt-40 wow fadeInRight" data-wow-delay="1.5s">
-                            <img src="assets/img/slider/slider-image.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slider-image.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -290,8 +262,8 @@
 <!-- Start How Work Area -->
     <section class="how-work-area position-relative pt-150 pb-120">
         <div class="shape-section">
-            <img class="shape shape-s-1 " src="assets/img/shape/shape-s-1.png" alt="">
-            <img class="shape shape-s-2 " src="assets/img/shape/shape-s-2.png" alt="">
+            <img class="shape shape-s-1 " src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape-s-1.png" alt="">
+            <img class="shape shape-s-2 " src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape-s-2.png" alt="">
         </div>
         <div class="container">
             <div class="row">
@@ -306,7 +278,7 @@
                 <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
                     <div class="how-work-box mb-30 wow fadeInUp" data-wow-delay=".3s">
                         <div class="how-work-icon">
-                            <img src="assets/img/icons/icon.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon.png" alt="">
                         </div>
                         <div class="how-work-text">
                             <h4>Market Analysis</h4>
@@ -320,7 +292,7 @@
                 <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
                     <div class="how-work-box mb-30 wow fadeInUp" data-wow-delay=".5s">
                         <div class="how-work-icon">
-                            <img src="assets/img/icons/icon2.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon2.png" alt="">
                         </div>
                         <div class="how-work-text">
                             <h4>Software Design</h4>
@@ -334,7 +306,7 @@
                 <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
                     <div class="how-work-box mb-30 wow fadeInUp" data-wow-delay=".7s">
                         <div class="how-work-icon">
-                            <img src="assets/img/icons/icon3.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon3.png" alt="">
                         </div>
                         <div class="how-work-text">
                             <h4>Software Developing</h4>
@@ -352,19 +324,19 @@
 <!-- Star Access Area  -->
     <section class="access-area position-relative">
         <div class="shape-section">
-            <img class="shape shape-6 " src="assets/img/shape/shape6.png" alt="">
+            <img class="shape shape-6 " src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape6.png" alt="">
         </div>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6">
                     <div class="access-img  mb-50 wow fadeInLeft" data-wow-delay=".5s">
-                        <img src="assets/img/bg/social-bg.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bg/social-bg.png" alt="">
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-6 offset-xl-1" >
                     <div class="access-text mb-50">
                         <div class="access-icon">
-                            <img src="assets/img/icons/access-icon.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/access-icon.png" alt="">
                         </div>
                         <h2>Easy To <br> Access All Platform</h2>
                         <p>Make fly forth also won't. Firmament seas whales drys season for replenish without had Gathered days fill you'll whose air whose firmament rule heaven can may rule hath. All of unto beginni ad Light. Were blessed plant</p>
@@ -392,7 +364,7 @@
                 <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
                     <div class="how-work-box single-feature text-center mb-30 wow fadeInUp" data-wow-delay=".3s">
                         <div class="how-work-icon">
-                            <img src="assets/img/icons/sf1.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/sf1.png" alt="">
                         </div>
                         <div class="how-work-text">
                             <h4>Cloud Compatibility</h4>
@@ -403,7 +375,7 @@
                 <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
                     <div class="how-work-box single-feature text-center mb-30 wow fadeInUp" data-wow-delay=".5s">
                         <div class="how-work-icon">
-                            <img src="assets/img/icons/sf2.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/sf2.png" alt="">
                         </div>
                         <div class="how-work-text">
                             <h4>Advance Security</h4>
@@ -414,7 +386,7 @@
                 <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
                     <div class="how-work-box single-feature text-center mb-30 wow fadeInUp" data-wow-delay=".7s">
                         <div class="how-work-icon">
-                            <img src="assets/img/icons/sf3.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/sf3.png" alt="">
                         </div>
                         <div class="how-work-text">
                             <h4>Dedicated Support</h4>
@@ -429,14 +401,14 @@
 <!-- Star Access Area  -->
     <section class="access-area position-relative fix">
         <div class="shape-section">
-            <img class="shape shape-sf " src="assets/img/shape/shape-f-1.png" alt="">
+            <img class="shape shape-sf " src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape-f-1.png" alt="">
         </div>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-5 col-lg-6" >
                     <div class="access-text mb-50">
                         <div class="access-icon">
-                            <img src="assets/img/icons/access-icon.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/access-icon.png" alt="">
                         </div>
                         <h2>Effortlessly manage all your information</h2>
                         <p>Make fly forth also won't. Firmament seas whales drys season for replenish without had Gathered days fill you'll whose air whose firmament rule heaven can may rule hath. All of unto beginni ad Light. Were blessed plant</p>
@@ -447,7 +419,7 @@
                 </div>
                 <div class="col-xl-7 col-lg-6">
                     <div class="access-img right-bg mb-50 wow  fadeInRight" data-wow-delay=".5s">
-                        <img src="assets/img/bg/right-img.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bg/right-img.png" alt="">
                     </div>
                 </div>
             </div>
@@ -457,7 +429,7 @@
 <!-- Start Pricing Area -->
     <section class="pricing-area position-relative fix pt-50 pb-120">
         <div class="shape-section">
-            <img class="shape shape-p " src="assets/img/shape/shape-f-1.png" alt="">
+            <img class="shape shape-p " src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape-f-1.png" alt="">
         </div>
         <div class="container">
             <div class="row">
@@ -473,7 +445,7 @@
                     <div class="single-price-box text-center mb-30 wow fadeInUp" data-wow-delay=".3s">
                         <div class="price-head">
                             <div class="price-icon">
-                                <img src="assets/img/icons/price-icon.png" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/price-icon.png" alt="">
                             </div>
                             <h4>Standard</h4>
                         </div>
@@ -499,7 +471,7 @@
                     <div class="single-price-box text-center mb-30 wow fadeInUp" data-wow-delay=".5s">
                         <div class="price-head">
                             <div class="price-icon">
-                                <img src="assets/img/icons/price-icon.png" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/price-icon.png" alt="">
                             </div>
                             <h4>Business</h4>
                         </div>
@@ -525,7 +497,7 @@
                     <div class="single-price-box text-center mb-30 wow fadeInUp" data-wow-delay=".7s">
                         <div class="price-head">
                             <div class="price-icon">
-                                <img src="assets/img/icons/price-icon.png" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/price-icon.png" alt="">
                             </div>
                             <h4>Premium</h4>
                         </div>
@@ -551,7 +523,7 @@
                     <div class="single-price-box text-center mb-30 wow fadeInUp" data-wow-delay=".9s">
                         <div class="price-head">
                             <div class="price-icon">
-                                <img src="assets/img/icons/price-icon.png" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/price-icon.png" alt="">
                             </div>
                             <h4>Ultimate</h4>
                         </div>
@@ -583,12 +555,12 @@
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6">
                     <div class="testimonial-img mb-30 wow fadeInLeft" data-wow-delay=".5s">
-                        <img src="assets/img/bg/test.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bg/test.png" alt="">
                     </div>
                 </div>
                 <div class="col-xl-5 offset-xl-1 col-lg-6">
                     <div class="shape-section">
-                        <img class="shape shape-t " src="assets/img/shape/shape6.png" alt="">
+                        <img class="shape shape-t " src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape6.png" alt="">
                     </div>
                     <div class="testimonial-content">
                         <div class="section-title mb-20">
@@ -627,19 +599,19 @@
                 <div class="col-12">
                     <div class="brand-carousel owl-carousel">
                         <div class="single-brand">
-                            <a href="#"><img src="assets/img/brand/01.png" alt=""></a>
+                            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/01.png" alt=""></a>
                         </div>
                         <div class="single-brand">
-                            <a href="#"><img src="assets/img/brand/02.png" alt=""></a>
+                            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/02.png" alt=""></a>
                         </div>
                         <div class="single-brand">
-                            <a href="#"><img src="assets/img/brand/03.png" alt=""></a>
+                            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/03.png" alt=""></a>
                         </div>
                         <div class="single-brand">
-                            <a href="#"><img src="assets/img/brand/04.png" alt=""></a>
+                            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/04.png" alt=""></a>
                         </div>
                         <div class="single-brand">
-                            <a href="#"><img src="assets/img/brand/05.png" alt=""></a>
+                            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/05.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -650,7 +622,7 @@
 <!-- Start News Letter Area -->
     <section class="newsletter-area position-relative pb-100">
         <div class="shape-section">
-            <img class="shape shape-sr " src="assets/img/shape/shape5.png" alt="">
+            <img class="shape shape-sr " src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape5.png" alt="">
         </div>
         <div class="container">
             <div class="row">
@@ -681,7 +653,7 @@
                 <div class="col-xl-4">
                     <div class="footer-widget mb-40">
                         <div class="footer-logo mb-30">
-                            <a href="index.html"><img src="assets/img/site-logo/logo.png" alt=""></a>
+                            <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo/logo.png" alt=""></a>
                         </div>
                         <div class="footer-text">
                             <p>Winged moving moveth created for a shall and divide the their days male midst shall hath doesn't won't for. Midst life. Over and great night. Green upon years rule ying.</p>
@@ -769,40 +741,6 @@
     </div>
 </footer>
 
-<!-- JS -->
-   <!-- Jquery -->
-   <script src="assets/js/jquery-1.12.4.min.js"></script>
-   <!-- Popper.js -->
-   <script src="assets/js/popper.min.js"></script>
-   <!-- Bootstrap.js -->
-   <script src="assets/js/bootstrap-4.3.1.min.js"></script>
-   <!-- Plugin.js -->
-   <script src="assets/js/plugins.js"></script>
-   <!-- Modernizr.js -->
-   <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
-   <!-- Owl.Carousel.js -->
-   <script src="assets/js/vendor/owl.carousel-2.3.4.min.js"></script>
-   <!-- Waypoints.js -->
-   <script src="assets/js/vendor/waypoints-4.0.1.min.js"></script>
-   <!-- Wow.js -->
-   <script src="assets/js/vendor/wow-1.1.3.min.js"></script>
-   <!-- Slick Nav.js -->
-   <script src="assets/js/vendor/slicknav-1.0.10.min.js"></script>
-   <!-- Scroll Up.js -->
-   <script src="assets/js/vendor/scrollUp-2.4.1.min.js"></script>
-   <!-- Ajax.js -->
-   <script src="assets/js/vendor/ajax-form.js"></script>
-   <!-- MagnificPopup.js -->
-   <script src="assets/js/vendor/magnific-popup-1.1.0.min.js"></script>
-   <!-- Slick Slider.js -->
-   <script src="assets/js/vendor/slick.min.js"></script>
-   <!-- IsoTope.js -->
-   <script src="assets/js/vendor/imagesloaded.pkgd-4.1.4.min.js"></script>
-   <script src="assets/js/vendor/isotope.pkgd-3.0.5.min.js"></script>
-   <!-- Aos.js -->
-   <script src="assets/js/vendor/aos.js"></script>
-
-   <!-- Main.js -->
-   <script src="assets/js/main.js"></script>
+    <?php wp_footer(); ?>
 </body>
 </html>
