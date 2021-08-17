@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
-   <meta charset="utf-8">
+   <meta charset="<?php bloginfo('charset'); ?>">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="description" content="Xisen - Creative HTML5 Template for Saas, Startup & Agency">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Title -->
-    <title>Home 7 || Xisen - Creative HTML5 Template for Saas, Startup & Agency</title>
+    <title><?php bloginfo( 'title' ); ?></title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/icon.png">
@@ -64,7 +64,9 @@
                 <div class="row align-items-center">
                     <div class="col-lg-2 col-6">
                         <div class="site-logo">
-                            <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo/logo.png" alt=""></a>
+                            <a href="<?php echo home_url(); ?>">
+                                <?php if(current_theme_supports('custom-logo')) : the_custom_logo(); endif; ?>
+                            </a>
                         </div>
                     </div>
                     <div class="col-6 d-block d-lg-none static">
