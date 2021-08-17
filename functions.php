@@ -1,4 +1,7 @@
 <?php
+    require_once(get_theme_file_path( '/inc/xisen-required-plugins.php' ));
+    require_once(get_theme_file_path( '/lib/theme-options/config.php' ));
+
     function xisen_theme_setup() {
         // Theme TextDomain
         load_theme_textdomain('xisen');
@@ -13,6 +16,11 @@
         add_theme_support('widgets');
         add_theme_support('post-thumbnails');
         add_theme_support('post-formats', array('aside', 'image', 'gallery', 'audio', 'video', 'link', 'status', 'quote', 'chat'));
+
+        $locations = array(
+            'main_menu'             =>  __('Primary Menu', 'xisen'),
+        );
+        register_nav_menus($locations);
     }
     add_action( 'after_setup_theme', 'xisen_theme_setup' );
 
@@ -31,6 +39,7 @@
         wp_enqueue_style('default-css', get_template_directory_uri().'/assets/css/default.css');
         wp_enqueue_style('main-css', get_template_directory_uri().'/assets/css/main.css');
         wp_enqueue_style('responsive-css', get_template_directory_uri().'/assets/css/responsive.css');
+        wp_enqueue_style('dashicons');
         wp_enqueue_style('theme-css', get_stylesheet_uri());
 
         //JS Enqueue
