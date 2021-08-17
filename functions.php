@@ -1,4 +1,6 @@
 <?php
+    require_once(get_theme_file_path( '/inc/xisen-required-plugins.php' ));
+
     function xisen_theme_setup() {
         // Theme TextDomain
         load_theme_textdomain('xisen');
