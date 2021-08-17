@@ -4,6 +4,9 @@
 
 <main>
 <!-- Start Slider Area -->
+    <?php
+
+    ?>
     <section class="slider-area header-bg fix">
         <div class="slider-shape">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape1.png" alt="" class="shape shape-1">
@@ -18,8 +21,9 @@
                 <div class="row align-items-center">
                     <div class="col-xl-5 col-lg-6">
                         <div class="slider-text">
-                            <h2 class="wow fadeInUp " data-wow-delay="0.4s"><span>Advanced</span>Future Software Made Simple</h2>
+                            <h2 class="wow fadeInUp " data-wow-delay="0.4s"><span>Advanced</span>Future Software Made Simple <?php echo redux::get_option('xisen_options', 'title'); ?></h2>
                             <p class="wow fadeInUp" data-wow-delay="0.9s">Herb fill fowl fourth they're were whales don it first green years seasons seed behold fruitful let gathering good</p>
+                            
                             <a href="#" class="btn wow fadeInUp" data-wow-delay="1.5s">Free trial</a>
                         </div>
                     </div>

@@ -60,3 +60,11 @@
         wp_enqueue_script('main-js', get_template_directory_uri().'/assets/js/main.js', array('jquery'), time(), true);
     }
     add_action( 'wp_enqueue_scripts', 'xisen_assets_enqueue' );
+
+    function get_xisen_redux_data($key, $default = '') {
+        if(class_exists('Redux')) {
+            return Redux::get_option('xisen_options', $key, $default);
+        } else {
+            return $default;
+        }
+    }
