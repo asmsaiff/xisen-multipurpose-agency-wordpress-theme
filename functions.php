@@ -13,6 +13,11 @@
         add_theme_support('widgets');
         add_theme_support('post-thumbnails');
         add_theme_support('post-formats', array('aside', 'image', 'gallery', 'audio', 'video', 'link', 'status', 'quote', 'chat'));
+
+        $locations = array(
+            'main_menu'             =>  __('Primary Menu', 'xisen'),
+        );
+        register_nav_menus($locations);
     }
     add_action( 'after_setup_theme', 'xisen_theme_setup' );
 
