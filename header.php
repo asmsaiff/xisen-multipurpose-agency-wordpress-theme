@@ -16,7 +16,7 @@
 </head>
 <body <?php body_class(); ?>>
     <!-- preloader  -->
-        <div id="preloader">
+        <!-- <div id="preloader">
             <div id="ctn-preloader" class="ctn-preloader">
                 <div class="animation-preloader">
                     <div class="spinner"></div>
@@ -55,7 +55,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     <!-- preloader end -->
 <!-- Start Header Area -->
     <header id="header-sticky" class="header-area header-absolute">
