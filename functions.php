@@ -39,7 +39,6 @@
         wp_enqueue_style('default-css', get_template_directory_uri().'/assets/css/default.css');
         wp_enqueue_style('main-css', get_template_directory_uri().'/assets/css/main.css');
         wp_enqueue_style('responsive-css', get_template_directory_uri().'/assets/css/responsive.css');
-        wp_enqueue_style('dashicons');
         wp_enqueue_style('theme-css', get_stylesheet_uri());
 
         //JS Enqueue
