@@ -13,6 +13,7 @@
         )
     ) );
 
+    // Hero Section
 	Redux::setSection( $opt_name, array(
         'title'  => esc_html__( 'Hero Section', 'xisen' ),
         'id'     => 'home_hero',
@@ -52,5 +53,30 @@
                 'title'     => esc_html__( 'Image', $xisen_textdomain ),
                 'desc'      => esc_html__( 'Homepage Hero Section Image', $xisen_textdomain ),
 			),
+        )
+    ) );
+
+    // How it Works Section
+    Redux::setSection( $opt_name, array(
+        'title'  => esc_html__( 'How it works section', 'xisen' ),
+        'id'     => 'home_how_it_works',
+        'desc'   => esc_html__( 'Home page how it works section', $xisen_textdomain ),
+        // 'icon'   => 'el el-th-large',
+		'subsection'	=>	true,
+        'fields' => array(
+            array(
+                'id'       => 'how_it_works_section_heading',
+                'type'     => 'text',
+                'title'    => esc_html__( 'Section Heading', $xisen_textdomain ),
+                'desc'     => esc_html__( 'How it works Section Heading', $xisen_textdomain ),
+			),
+            array(
+                'id'       => 'how_it_works_section_short_description',
+                'type'     => 'textarea',
+                'rows'     =>  2,
+                'title'    => esc_html__( 'Hero Short Description', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Homepage Hero Section Short Description', $xisen_textdomain ),
+			),
+            
         )
     ) );
