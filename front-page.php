@@ -32,7 +32,10 @@
                     </div>
                     <div class="col-xl-6 offset-xl-1 col-lg-6 d-none d-md-block" >
                         <div class="slider-img mt-40 wow fadeInRight" data-wow-delay="1.5s">
-                            <img src="<?php echo get_xisen_redux_data('hero_section_img'); ?>" alt="">
+                            <img src="<?php
+                                global $xisen_options;
+                                echo $xisen_options['hero_section_img']['url'];
+                            ?>" alt="">
                         </div>
                     </div>
                 </div>
