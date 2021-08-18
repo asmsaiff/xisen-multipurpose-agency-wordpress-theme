@@ -43,6 +43,7 @@
         </div>
     </section>
 <!-- End Slider Area -->
+
 <!-- Start How Work Area -->
     <section class="how-work-area position-relative pt-150 pb-120">
         <div class="shape-section">
@@ -53,58 +54,45 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-title mb-70 text-center">
-                        <h2>How it works</h2>
-                        <p>Him have deep brought life darkness firmament unto move</p>
+                        <h2><?php echo get_xisen_redux_data('how_it_works_section_heading'); ?></h2>
+                        <p><?php echo get_xisen_redux_data('how_it_works_section_short_description'); ?></p>
                     </div>
                 </div>
             </div>
             <div class="row">
+                <?php
+                    $xisen_how_it_works = new WP_Query(array(
+                        'post_type'         =>  'xisen_services',
+                        'posts_per_page'    =>  6,
+                    ));
+
+                    if($xisen_how_it_works->have_posts()) :
+                        while($xisen_how_it_works->have_posts()) :
+                            $xisen_how_it_works->the_post();
+                ?>
                 <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
                     <div class="how-work-box mb-30 wow fadeInUp" data-wow-delay=".3s">
                         <div class="how-work-icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon.png" alt="">
                         </div>
                         <div class="how-work-text">
-                            <h4>Market Analysis</h4>
-                            <p>Place isn't form together. Male night light. Days created firmament meat</p>
+                            <h4><?php the_title(); ?></h4>
+                            <p><?php echo wp_trim_words(get_the_content(), 10, '...'); ?></p>
                             <div class="how-work-btn">
-                                <a href="#" class="btn btn-inline">Read more</a>
+                                <a href="<?php the_permalink(); ?>" class="btn btn-inline">Read More</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
-                    <div class="how-work-box mb-30 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="how-work-icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon2.png" alt="">
-                        </div>
-                        <div class="how-work-text">
-                            <h4>Software Design</h4>
-                            <p>Place isn't form together. Male night light. Days created firmament meat</p>
-                            <div class="how-work-btn">
-                                <a href="#" class="btn btn-inline">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
-                    <div class="how-work-box mb-30 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="how-work-icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon3.png" alt="">
-                        </div>
-                        <div class="how-work-text">
-                            <h4>Software Developing</h4>
-                            <p>Place isn't form together. Male night light. Days created firmament meat</p>
-                            <div class="how-work-btn">
-                                <a href="#" class="btn btn-inline">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                        endwhile;
+                    endif;
+                ?>
             </div>
         </div>
     </section>
 <!-- End How Work Area -->
+
 <!-- Star Access Area  -->
     <section class="access-area position-relative">
         <div class="shape-section">
