@@ -21,15 +21,21 @@
                 <div class="row align-items-center">
                     <div class="col-xl-5 col-lg-6">
                         <div class="slider-text">
-                            <h2 class="wow fadeInUp " data-wow-delay="0.4s"><span>Advanced</span>Future Software Made Simple <?php echo redux::get_option('xisen_options', 'title'); ?></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.9s">Herb fill fowl fourth they're were whales don it first green years seasons seed behold fruitful let gathering good</p>
+                            <h2 class="wow fadeInUp " data-wow-delay="0.4s">
+                                <?php echo get_xisen_redux_data('hero_title'); ?>
+                            </h2>
+
+                            <p class="wow fadeInUp" data-wow-delay="0.9s"><?php echo get_xisen_redux_data('hero_short_desc'); ?></p>
                             
-                            <a href="#" class="btn wow fadeInUp" data-wow-delay="1.5s">Free trial</a>
+                            <a href="<?php echo get_xisen_redux_data('hero_section_button_url'); ?>" class="btn wow fadeInUp" data-wow-delay="1.5s"><?php echo get_xisen_redux_data('hero_section_button_label'); ?></a>
                         </div>
                     </div>
                     <div class="col-xl-6 offset-xl-1 col-lg-6 d-none d-md-block" >
                         <div class="slider-img mt-40 wow fadeInRight" data-wow-delay="1.5s">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/slider/slider-image.png" alt="">
+                            <img src="<?php
+                                global $xisen_options;
+                                echo $xisen_options['hero_section_img']['url'];
+                            ?>" alt="">
                         </div>
                     </div>
                 </div>
