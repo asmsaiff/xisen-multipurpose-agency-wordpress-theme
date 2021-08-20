@@ -70,7 +70,7 @@
                         </ul>
                     </div>
                     <div class="banner-img">
-                        <a href="#"><img src="assets/img/banner/banner.jpg" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner/banner.jpg" alt=""></a>
                     </div>
                 </div>
             </div>
