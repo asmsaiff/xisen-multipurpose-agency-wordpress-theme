@@ -77,6 +77,76 @@
                 'title'    => esc_html__( 'Hero Short Description', $xisen_textdomain ),
                 'desc'     => esc_html__( 'Homepage Hero Section Short Description', $xisen_textdomain ),
 			),
-            
         )
     ) );
+
+    // How it Works Section
+    Redux::setSection( $opt_name, array(
+        'title'  => esc_html__( 'Star Access Area', 'xisen' ),
+        'id'     => 'home_star_access',
+        'desc'   => esc_html__( 'Home page how it works section', $xisen_textdomain ),
+        // 'icon'   => 'el el-th-large',
+		'subsection'	=>	true,
+        'fields' => array(
+            array(
+                'id'       => 'star_access_corner_left_image',
+                'type'     => 'media',
+                'url'       =>  true,
+                'title'    => esc_html__( 'Left Side Image', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Section Left Side Image', $xisen_textdomain ),
+			),
+            array(
+                'id'       => 'star_access_corner_icon',
+                'type'     => 'media',
+                'url'       =>  true,
+                'title'    => esc_html__( 'Icon', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Easy Access Corner Icon', $xisen_textdomain ),
+			),
+            array(
+                'id'       => 'star_access_corner_title',
+                'type'     => 'text',
+                'title'    => esc_html__( 'Title', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Easy Access Corner Title', $xisen_textdomain ),
+			),
+            array(
+                'id'       => 'star_access_corner_short_description',
+                'type'     => 'textarea',
+                'title'    => esc_html__( 'Short Description', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Easy Access Corner Short Description', $xisen_textdomain ),
+			),
+            array(
+                'id'       => 'star_access_corner_btn_label',
+                'type'     => 'text',
+                'title'    => esc_html__( 'Button Label', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Easy Access Corner Button Label', $xisen_textdomain ),
+			),
+            array(
+                'id'       => 'star_access_corner_btn_url',
+                'type'     => 'text',
+                'title'    => esc_html__( 'Button Link', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Easy Access Corner Button Link', $xisen_textdomain ),
+			),
+        )
+    ) );
+
+    Redux::set_section($opt_name, array(
+        'id'                =>  'home_software_features',
+        'title'             =>  'Software Features',
+        'desc'              =>  'Software Features Section',
+        'subsection'        =>  true,
+        'fields'            =>  array(
+            array(
+                'id'            =>  'software_features_title',
+                'type'          =>  'text',
+                'title'         =>  esc_html__( 'Title', $xisen_textdomain ),
+                'desc'          =>  esc_html__( 'Software Features Section Title', $xisen_textdomain ),
+            ),
+            array(
+                'id'            =>  'software_features_short_desc',
+                'type'          =>  'textarea',
+                'rows'          =>  1,
+                'title'         =>  esc_html__( 'Short Description', $xisen_textdomain ),
+                'desc'          =>  esc_html__( 'Software Features Section Short Description', $xisen_textdomain ),
+            ),
+        )
+    ));
