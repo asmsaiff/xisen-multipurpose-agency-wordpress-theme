@@ -102,18 +102,20 @@
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6">
                     <div class="access-img  mb-50 wow fadeInLeft" data-wow-delay=".5s">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bg/social-bg.png" alt="">
+                        <img src="<?php global $xisen_options; echo $xisen_options['star_access_corner_left_image']['url']; ?>" alt="">
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-6 offset-xl-1" >
                     <div class="access-text mb-50">
                         <div class="access-icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/access-icon.png" alt="">
+                            <img src="<?php global $xisen_options; echo $xisen_options['star_access_corner_icon']['url']; ?>" alt="">
                         </div>
-                        <h2>Easy To <br> Access All Platform</h2>
-                        <p>Make fly forth also won't. Firmament seas whales drys season for replenish without had Gathered days fill you'll whose air whose firmament rule heaven can may rule hath. All of unto beginni ad Light. Were blessed plant</p>
+                        <h2><?php echo get_xisen_redux_data('star_access_corner_title'); ?></h2>
+                        <p><?php echo get_xisen_redux_data('star_access_corner_short_description'); ?></p>
                         <div class="access-btn" data-aos="fade-up">
-                            <a href="#" class="btn">Learn More</a>
+                            <a href="<?php echo get_xisen_redux_data('star_access_corner_btn_url'); ?>" class="btn">
+                                <?php echo get_xisen_redux_data('star_access_corner_btn_label'); ?>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -127,45 +129,37 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-title mb-70 text-center">
-                        <h2>Software Feature</h2>
-                        <p>Gathered was to yielding god heaven lights about void thing.</p>
+                        <h2><?php echo get_xisen_redux_data('software_features_title'); ?></h2>
+                        <p><?php echo get_xisen_redux_data('software_features_short_desc'); ?></p>
                     </div>
                 </div>
             </div>
             <div class="row">
+                <?php
+                    $xisen_software_features = new WP_Query(array(
+                        'post_type'             =>  'software_features',
+                        'posts_per_page'        =>  3,
+                    ));
+
+                    if($xisen_software_features->have_posts()) :
+                        while($xisen_software_features->have_posts()) :
+                            $xisen_software_features->the_post();
+                ?>
                 <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
                     <div class="how-work-box single-feature text-center mb-30 wow fadeInUp" data-wow-delay=".3s">
                         <div class="how-work-icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/sf1.png" alt="">
+                            <?php if(has_post_thumbnail()) : the_post_thumbnail(); endif; ?>
                         </div>
                         <div class="how-work-text">
-                            <h4>Cloud Compatibility</h4>
-                            <p>Man fruit moving fourt moving multiply so years rule is not It after you also do seed grass that so which grass fowl him</p>
+                            <h4><?php the_title(); ?></h4>
+                            <p><?php the_excerpt(); ?></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
-                    <div class="how-work-box single-feature text-center mb-30 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="how-work-icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/sf2.png" alt="">
-                        </div>
-                        <div class="how-work-text">
-                            <h4>Advance Security</h4>
-                            <p>Man fruit moving fourt moving multiply so years rule is not It after you also do seed grass that so which grass fowl him</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
-                    <div class="how-work-box single-feature text-center mb-30 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="how-work-icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/sf3.png" alt="">
-                        </div>
-                        <div class="how-work-text">
-                            <h4>Dedicated Support</h4>
-                            <p>Man fruit moving fourt moving multiply so years rule is not It after you also do seed grass that so which grass fowl him</p>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                        endwhile;
+                    endif;
+                ?>
             </div>
         </div>
     </section>
