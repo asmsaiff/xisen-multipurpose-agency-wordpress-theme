@@ -80,7 +80,7 @@
         )
     ) );
 
-    // How it Works Section
+    // Star Access Area Section
     Redux::setSection( $opt_name, array(
         'title'  => esc_html__( 'Star Access Area', 'xisen' ),
         'id'     => 'home_star_access',
@@ -150,3 +150,53 @@
             ),
         )
     ));
+
+
+    // Star Access Before Pricing Plan Area Section
+    Redux::setSection( $opt_name, array(
+        'title'  => esc_html__( 'Before Pricing Star Access Area', 'xisen' ),
+        'id'     => 'home_star_access_before_plan',
+        'desc'   => esc_html__( 'Home page before pricing plan star access section', $xisen_textdomain ),
+        // 'icon'   => 'el el-th-large',
+		'subsection'	=>	true,
+        'fields' => array(
+            array(
+                'id'       => 'star_access_corner_before_plan_right_image',
+                'type'     => 'media',
+                'url'       =>  true,
+                'title'    => esc_html__( 'Right Side Image', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Section Right Side Image', $xisen_textdomain ),
+			),
+            array(
+                'id'       => 'star_access_corner_before_plan_icon',
+                'type'     => 'media',
+                'url'       =>  true,
+                'title'    => esc_html__( 'Icon', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Easy Access Before Plan Corner Icon', $xisen_textdomain ),
+			),
+            array(
+                'id'       => 'star_access_corner_before_plan_title',
+                'type'     => 'text',
+                'title'    => esc_html__( 'Title', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Easy Access Corner Title', $xisen_textdomain ),
+			),
+            array(
+                'id'       => 'star_access_corner_before_plan_short_description',
+                'type'     => 'textarea',
+                'title'    => esc_html__( 'Short Description', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Easy Access Corner Short Description', $xisen_textdomain ),
+			),
+            array(
+                'id'       => 'star_access_corner_before_plan_btn_label',
+                'type'     => 'text',
+                'title'    => esc_html__( 'Button Label', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Easy Access Corner Button Label', $xisen_textdomain ),
+			),
+            array(
+                'id'       => 'star_access_corner_before_plan_btn_url',
+                'type'     => 'text',
+                'title'    => esc_html__( 'Button Link', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Easy Access Corner Button Link', $xisen_textdomain ),
+			),
+        )
+    ) );

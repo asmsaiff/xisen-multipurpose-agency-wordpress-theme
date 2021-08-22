@@ -174,18 +174,22 @@
                 <div class="col-xl-5 col-lg-6" >
                     <div class="access-text mb-50">
                         <div class="access-icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/access-icon.png" alt="">
+                            <img src="<?php global $xisen_options; echo $xisen_options['star_access_corner_before_plan_icon']['url']; ?>" alt="">
                         </div>
-                        <h2>Effortlessly manage all your information</h2>
-                        <p>Make fly forth also won't. Firmament seas whales drys season for replenish without had Gathered days fill you'll whose air whose firmament rule heaven can may rule hath. All of unto beginni ad Light. Were blessed plant</p>
+                        <h2><?php echo get_xisen_redux_data('star_access_corner_before_plan_title'); ?></h2>
+                        <p>
+                            <?php echo get_xisen_redux_data('star_access_corner_before_plan_short_description'); ?>
+                        </p>
                         <div class="access-btn" data-aos="fade-up">
-                            <a href="#" class="btn">Learn More</a>
+                            <a href="<?php echo get_xisen_redux_data('star_access_corner_before_plan_btn_url'); ?>" class="btn">
+                                <?php echo get_xisen_redux_data('star_access_corner_before_plan_btn_label'); ?>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-7 col-lg-6">
                     <div class="access-img right-bg mb-50 wow  fadeInRight" data-wow-delay=".5s">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bg/right-img.png" alt="">
+                        <img src="<?php global $xisen_options; echo $xisen_options['star_access_corner_before_plan_right_image']['url']; ?>" alt="">
                     </div>
                 </div>
             </div>
@@ -207,110 +211,62 @@
                 </div>
             </div>
             <div class="row">
+                <?php
+                    $xisen_pricing = new WP_Query(array(
+                        'post_type'         =>  'xisen_pricing',
+                        'posts_per_page'    =>  4,
+                    ));
+
+                    if($xisen_pricing->have_posts()) :
+                        while($xisen_pricing->have_posts()) :
+                            $xisen_pricing->the_post();
+                ?>
                 <div class="col-xl-3 col-md-6">
                     <div class="single-price-box text-center mb-30 wow fadeInUp" data-wow-delay=".3s">
                         <div class="price-head">
                             <div class="price-icon">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/price-icon.png" alt="">
+                                <?php if(has_post_thumbnail()) : the_post_thumbnail(); endif; ?>
                             </div>
-                            <h4>Standard</h4>
+                            <h4><?php the_title(); ?></h4>
                         </div>
                         <div class="price-body">
                             <div class="price">
-                                <h5>$20<span>/month</span></h5>
+                                <h5>$<?php the_field('package_price'); ?><span>/month</span></h5>
                             </div>
+
+                            <?php
+                                if( have_rows('pricing_plan_features') ):
+                                    while( have_rows('pricing_plan_features') ) :
+                                        the_row();
+
+                                        $storage_size = get_sub_field('storage_size');
+                                        $cloud_storage_size = get_sub_field('cloud_storage_size');
+                                        $support_times = get_sub_field('support_times');
+                                        $email_accounts = get_sub_field('email_accounts');
+                                        $database = get_sub_field('database');
+                            ?>
                             <ul class="package-list">
-                                <li>15GB Cloud Storage</li>
-                                <li>Unlimited Account</li>
-                                <li>15GB Storage</li>
-                                <li>Sale After Service</li>
-                                <li>3 Host Domain Service</li>
-                                <li> 24/7 Support</li>
+                                <li><?php echo $storage_size; ?></li>
+                                <li><?php echo $cloud_storage_size; ?></li>
+                                <li><?php echo $support_times; ?></li>
+                                <li><?php echo $email_accounts; ?></li>
+                                <li><?php echo $database; ?></li>
                             </ul>
+                            <?php
+                                    endwhile;
+                                endif;
+                            ?>
+                            
                         </div>
                         <div class="pricing-btn">
                             <a href="#" class="btn btn-inline">Purchase Now</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="single-price-box text-center mb-30 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="price-head">
-                            <div class="price-icon">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/price-icon.png" alt="">
-                            </div>
-                            <h4>Business</h4>
-                        </div>
-                        <div class="price-body">
-                            <div class="price">
-                                <h5>$20<span>/month</span></h5>
-                            </div>
-                            <ul class="package-list">
-                                <li>15GB Cloud Storage</li>
-                                <li>Unlimited Account</li>
-                                <li>15GB Storage</li>
-                                <li>Sale After Service</li>
-                                <li>3 Host Domain Service</li>
-                                <li> 24/7 Support</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-btn">
-                            <a href="#" class="btn btn-inline">Purchase Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="single-price-box text-center mb-30 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="price-head">
-                            <div class="price-icon">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/price-icon.png" alt="">
-                            </div>
-                            <h4>Premium</h4>
-                        </div>
-                        <div class="price-body">
-                            <div class="price">
-                                <h5>$20<span>/month</span></h5>
-                            </div>
-                            <ul class="package-list">
-                                <li>15GB Cloud Storage</li>
-                                <li>Unlimited Account</li>
-                                <li>15GB Storage</li>
-                                <li>Sale After Service</li>
-                                <li>3 Host Domain Service</li>
-                                <li> 24/7 Support</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-btn">
-                            <a href="#" class="btn btn-inline">Purchase Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="single-price-box text-center mb-30 wow fadeInUp" data-wow-delay=".9s">
-                        <div class="price-head">
-                            <div class="price-icon">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/price-icon.png" alt="">
-                            </div>
-                            <h4>Ultimate</h4>
-                        </div>
-                        <div class="price-body">
-                            <div class="price">
-                                <h5>$20<span>/month</span></h5>
-                            </div>
-                            <ul class="package-list">
-                                <li>15GB Cloud Storage</li>
-                                <li>Unlimited Account</li>
-                                <li>15GB Storage</li>
-                                <li>Sale After Service</li>
-                                <li>3 Host Domain Service</li>
-                                <li> 24/7 Support</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-btn">
-                            <a href="#" class="btn btn-inline">Purchase Now</a>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                        endwhile;
+                    endif;
+                ?>
             </div>
         </div>
     </section>
