@@ -26,6 +26,9 @@
         add_theme_support('post-thumbnails');
         add_theme_support('post-formats', array('aside', 'image', 'gallery', 'audio', 'video', 'link', 'status', 'quote', 'chat'));
 
+        // WooCommerce Support Add
+        add_theme_support( 'woocommerce' );
+
         $locations = array(
             'main_menu'             =>  __('Primary Menu', 'xisen'),
         );

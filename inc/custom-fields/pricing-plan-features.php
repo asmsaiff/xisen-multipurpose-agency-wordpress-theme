@@ -19,9 +19,9 @@
 						'id' => '',
 					),
 					'collapsed' => '',
-					'min' => 0,
-					'max' => 0,
-					'layout' => 'table',
+					'min' => 1,
+					'max' => 1,
+					'layout' => 'row',
 					'button_label' => '',
 					'sub_fields' => array(
 						array(
@@ -177,8 +177,39 @@
 					'default_value' => '',
 					'placeholder' => '',
 				),
+
+				array(
+					'key' => 'field_61244057d22ca',
+					'label' => 'Pricing Plan Product Selection',
+					'name' => 'pricing_plan_product_selection',
+					'type' => 'post_object',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'post_type' => array(
+						0 => 'product',
+					),
+					'taxonomy' => '',
+					'allow_null' => 0,
+					'multiple' => 0,
+					'return_format' => 'object',
+					'ui' => 1,
+				),
 			),
 			'location' => array(
+				array(
+					array(
+						'param' => 'post_type',
+						'operator' => '==',
+						'value' => 'xisen_pricing',
+					),
+				),
+
 				array(
 					array(
 						'param' => 'post_type',
