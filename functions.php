@@ -8,7 +8,7 @@
     require_once(get_theme_file_path( '/inc/custom-post-types/xisen-software-features.php' ));
 
     // Custom Fields
-    require_once(get_theme_file_path( '/inc/custom-post-types/pricing-plan-features.php' ));
+    require_once(get_theme_file_path( '/inc/custom-fields/pricing-plan-features.php' ));
 
     // Theme Setup
     function xisen_theme_setup() {
