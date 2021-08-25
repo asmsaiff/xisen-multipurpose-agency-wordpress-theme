@@ -163,7 +163,7 @@
 				),
 				array(
 					'key' => 'field_61244057d22ca',
-					'label' => 'Pricing Plan Product Selection',
+					'label' => 'Select Plan',
 					'name' => 'pricing_plan_product_selection',
 					'type' => 'post_object',
 					'instructions' => '',
