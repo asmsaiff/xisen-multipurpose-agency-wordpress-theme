@@ -256,11 +256,17 @@
                                     endwhile;
                                 endif;
                             ?>
-                            
                         </div>
+                        <?php
+                            $plan_prod_obj = get_field('pricing_plan_product_selection');
+                            if($plan_prod_obj) :
+                        ?>
                         <div class="pricing-btn">
-                            <a href="#" class="btn btn-inline">Purchase Now</a>
+                            <a href="<?php
+                                echo '?add-to-cart='.$plan_prod_obj->ID;
+                            ?>" class="btn btn-inline">Purchase Now</a>
                         </div>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <?php

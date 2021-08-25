@@ -162,23 +162,6 @@
 					'maxlength' => '',
 				),
 				array(
-					'key' => 'field_6121d9adb2512',
-					'label' => 'Purchase Button Link',
-					'name' => 'purchase_button_link',
-					'type' => 'url',
-					'instructions' => '',
-					'required' => 1,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-				),
-
-				array(
 					'key' => 'field_61244057d22ca',
 					'label' => 'Pricing Plan Product Selection',
 					'name' => 'pricing_plan_product_selection',
