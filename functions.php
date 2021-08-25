@@ -1,6 +1,6 @@
 <?php
     require_once(get_theme_file_path( '/inc/xisen-required-plugins.php' ));
-    require_once(get_theme_file_path( '/lib/theme-options/config.php' ));
+    require_once(get_theme_file_path( '/inc/theme-options/config.php' ));
 
     // Post Types
     require_once(get_theme_file_path( '/inc/custom-post-types/xisen-pricing-plan.php' ));
