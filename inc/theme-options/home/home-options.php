@@ -129,6 +129,7 @@
         )
     ) );
 
+    // Software Features
     Redux::set_section($opt_name, array(
         'id'                =>  'home_software_features',
         'title'             =>  'Software Features',
@@ -152,7 +153,7 @@
     ));
 
 
-    // Star Access Before Pricing Plan Area Section
+    // Before Pricing Star Access Area
     Redux::setSection( $opt_name, array(
         'title'  => esc_html__( 'Before Pricing Star Access Area', 'xisen' ),
         'id'     => 'home_star_access_before_plan',
@@ -197,6 +198,37 @@
                 'type'     => 'text',
                 'title'    => esc_html__( 'Button Link', $xisen_textdomain ),
                 'desc'     => esc_html__( 'Easy Access Corner Button Link', $xisen_textdomain ),
+			),
+        )
+    ) );
+
+    // Testimonial Section
+    Redux::setSection( $opt_name, array(
+        'title'  => esc_html__( 'Testimonial', 'xisen' ),
+        'id'     => 'home_testimonial',
+        'desc'   => esc_html__( 'Home page testimonial slider section', $xisen_textdomain ),
+        // 'icon'   => 'el el-th-large',
+		'subsection'	=>	true,
+        'fields' => array(
+            array(
+                'id'       => 'testimonial_section_left_image',
+                'type'     => 'media',
+                'url'       =>  true,
+                'title'    => esc_html__( 'Image', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Section Left Side Image', $xisen_textdomain ),
+			),
+            array(
+                'id'       => 'testimonial_section_heading',
+                'type'     => 'text',
+                'title'    => esc_html__( 'Heading', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Section Heading', $xisen_textdomain ),
+			),
+            array(
+                'id'       => 'testimonial_section_short_desc',
+                'type'     => 'textarea',
+                'rows'     => 2,
+                'title'    => esc_html__( 'Short Description', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Section Short Description', $xisen_textdomain ),
 			),
         )
     ) );

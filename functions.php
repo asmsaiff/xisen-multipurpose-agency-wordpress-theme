@@ -9,6 +9,7 @@
 
     // Custom Fields
     require_once(get_theme_file_path( '/inc/custom-fields/pricing-plan-features.php' ));
+    require_once(get_theme_file_path( '/inc/custom-fields/testimonials.php' ));
 
     // Theme Setup
     function xisen_theme_setup() {
