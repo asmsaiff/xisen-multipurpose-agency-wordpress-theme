@@ -60,7 +60,9 @@
 <!-- Start Header Area -->
     <header id="header-sticky" class="header-area <?php
         if(!is_single(is_post_type_archive('xisen_services'))) : echo 'header-absolute'; endif;
-        if(is_single(is_post_type_archive('xisen_services'))) : echo 'home-2'; endif; ?>"
+        if(is_single(is_post_type_archive('xisen_services'))) : echo 'home-2'; endif;
+        if(is_page()) : echo 'home-2'; endif; ?>"
+        
         >
         <div class="container">
             <div class="header-wrapper">
