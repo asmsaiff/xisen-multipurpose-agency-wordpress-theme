@@ -283,7 +283,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6">
                     <div class="testimonial-img mb-30 wow fadeInLeft" data-wow-delay=".5s">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bg/test.png" alt="">
+                        <img src="<?php global $xisen_options; echo $xisen_options['testimonial_section_left_image']['url']; ?>" alt="">
                     </div>
                 </div>
                 <div class="col-xl-5 offset-xl-1 col-lg-6">
@@ -292,27 +292,32 @@
                     </div>
                     <div class="testimonial-content">
                         <div class="section-title mb-20">
-                            <h2>What our <br>core clients saying? </h2>
+                            <h2>
+                                <?php echo get_xisen_redux_data('testimonial_section_heading'); ?>
+                            </h2>
                         </div>
                         <div class="testimonial-carousel mb-30 owl-carousel">
+                            <?php 
+                                $xisen_testimonial = new WP_Query(array(
+                                    'post_type'         =>  'xisen_testimonials',
+                                ));
+
+                                if($xisen_testimonial->have_posts()) :
+                                    while($xisen_testimonial->have_posts()) :
+                                        $xisen_testimonial->the_post();
+                            ?>
                             <div class="single-testimonial">
-                                <p>Bearing one Seas his give creepeth hath green set in one grass yielding beast she'd deep man creature a life female let fruit have unto yielding.</p>
+                                <p><?php echo the_field('testimonial_content'); ?></p>
                                 <div class="client-name">
-                                    <h6>Karlo Hasels, <span> Project Manager</span></h6>
+                                    <h6>
+                                        <?php echo the_field('name'); ?>, <span> <?php echo the_field('designation'); ?></span>
+                                    </h6>
                                 </div>
                             </div>
-                            <div class="single-testimonial">
-                                <p>Bearing one Seas his give creepeth hath green set in one grass yielding beast she'd deep man creature a life female let fruit have unto yielding.</p>
-                                <div class="client-name">
-                                    <h6>Tanvir Ahamed, <span>Web Developer</span></h6>
-                                </div>
-                            </div>
-                            <div class="single-testimonial">
-                                <p>Bearing one Seas his give creepeth hath green set in one grass yielding beast she'd deep man creature a life female let fruit have unto yielding.</p>
-                                <div class="client-name">
-                                    <h6>Mousumi Ahamed, <span>Graphics Design</span></h6>
-                                </div>
-                            </div>
+                            <?php
+                                    endwhile;
+                                endif;
+                            ?>
                         </div>
                     </div>
                 </div>

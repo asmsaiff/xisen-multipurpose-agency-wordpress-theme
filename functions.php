@@ -1,6 +1,9 @@
 <?php
     require_once(get_theme_file_path( '/inc/xisen-required-plugins.php' ));
-    require_once(get_theme_file_path( '/lib/theme-options/config.php' ));
+
+    // Option Panel
+    require_once(get_theme_file_path( '/inc/theme-options/config.php' ));
+    require_once(get_theme_file_path( '/inc/theme-options/single-page/single-page-options.php' ));
 
     // Post Types
     require_once(get_theme_file_path( '/inc/custom-post-types/xisen-pricing-plan.php' ));
@@ -9,6 +12,7 @@
 
     // Custom Fields
     require_once(get_theme_file_path( '/inc/custom-fields/pricing-plan-features.php' ));
+    require_once(get_theme_file_path( '/inc/custom-fields/testimonials.php' ));
 
     // Theme Setup
     function xisen_theme_setup() {
