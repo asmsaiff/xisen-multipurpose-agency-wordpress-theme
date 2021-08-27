@@ -12,9 +12,7 @@
                     </div>
                     
                     <div class="faq-form">
-                        <form action="">
-                            <?php echo do_shortcode(get_field('contact_form_shortcode')); ?>
-                        </form>
+                        <?php echo do_shortcode(get_field('contact_form_shortcode')); ?>
                     </div>
                 </div>
             </div>
