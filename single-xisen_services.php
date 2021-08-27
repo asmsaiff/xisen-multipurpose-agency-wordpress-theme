@@ -6,7 +6,7 @@
 
 <main>
 <!-- Start Breadcrumb Area -->
-    <section class="breadcrumb-area position-relative pt-90 pb-60 fix" data-background="<?php echo get_template_directory_uri(); ?>/assets/img/bg/page-title-bg.jpg">
+    <section class="breadcrumb-area position-relative pt-5 pb-5 fix" data-background="<?php echo get_template_directory_uri(); ?>/assets/img/bg/page-title-bg.jpg">
         <div class="shape-action">
             <img class="shape shape-2  " src="assets/img/shape/shape2.png" alt="">
             <img class="shape shape-4 " src="assets/img/shape/shape3.png" alt="">
@@ -34,7 +34,7 @@
     </section>
 <!-- End Breadcrumb Area -->
 <!-- Start Service Details Area -->
-    <section class="service-details-area pt-140 pb-110">
+    <section class="service-details-area pt-50 pb-50">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 order-lg-2">
