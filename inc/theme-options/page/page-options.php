@@ -3,7 +3,7 @@
     Redux::setSection( $opt_name, array(
         'title'  => esc_html__( 'Page', 'xisen' ),
         'id'     => 'xisen_page',
-        'desc'   => esc_html__( 'Single page options', $xisen_textdomain ),
+        'desc'   => esc_html__( 'Page options', $xisen_textdomain ),
         'icon'   => 'el el-th-large',
         'fields' => array(
             array(
@@ -18,19 +18,11 @@
     ) );
 
     Redux::setSection( $opt_name, array(
-        'title'  => esc_html__( 'FAQ Page', 'xisen' ),
+        'title'  => esc_html__( 'FAQ Page Options', 'xisen' ),
         'id'     => 'faq_page',
-        'desc'   => esc_html__( 'Single page options', $xisen_textdomain ),
         // 'icon'   => 'el el-th-large',
         'subsection'    =>  true,
         'fields' => array(
-            array(
-                'id'           => 'faq_page_raw_texts',
-                'type'         => 'raw',
-                'title'        => __('FAQ Page', $opt_name),
-                'desc'         => __('This is the description field for additional info.', $opt_name),
-            ),
-
             array(
                 'id'        =>  'faq_page_under_header_title',
                 'type'      =>  'text',
