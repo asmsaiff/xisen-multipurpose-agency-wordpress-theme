@@ -15,7 +15,8 @@
 		'display_version'      	=>	$theme->get( 'Version' ),
 		'menu_title'           	=>	esc_html__( 'Xisen Options', $xisen_textdomain ),
 		'customizer'           	=>	true,
-		'dev_mode'				=>	false
+		'dev_mode'				=>	false,
+		'admin_bar_icon'     => 'dashicons-portfolio',
 	);
 	
 	Redux::setArgs( $opt_name, $args );

@@ -10,6 +10,13 @@
 <main>
 <?php get_template_part('template-parts/common/page', 'header'); ?>
 
+<?php
+    $xisen_features = new WP_Query(array(
+        'post_type'             =>  'software_features',
+    ));
+
+    if($xisen_features->have_posts()) :
+?>
 <!-- Start Feature list area -->
 <section class="feature-list-area home-4 pt-150">
     <div class="container">
@@ -22,77 +29,30 @@
                 </div>
             </div>
         </div>
+        
         <div class="row">
-        <div class="col-lg-4 col-md-6">
-            <div class="feature-list-item home-4 mb-50 wow fadeInUp" data-wow-delay=".3s">
-                <div class="feature-list-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ex1.png" alt="">
-                </div>
-                <div class="feature-list-content feature-list-content-4">
-                    <h3>Business Opportunity</h3>
-                    <p>Given stars herb olive eghts you and earth bea you fourt earth second an multip made thats were upon an form</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="feature-list-item home-4 mb-50 wow fadeInUp" data-wow-delay=".5s">
-                <div class="feature-list-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ex2.png" alt="">
-                </div>
-                <div class="feature-list-content feature-list-content-4">
-                    <h3>Infinite Colors</h3>
-                    <p>Given stars herb olive eghts you and earth bea you fourt earth second an multip made thats were upon an form</p>
+            <?php
+                while($xisen_features->have_posts()) :
+                    $xisen_features->the_post();
+            ?>
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-list-item home-4 mb-50 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="feature-list-icon">
+                        <?php if(has_post_thumbnail()) : the_post_thumbnail(); endif; ?>
+                    </div>
+                    <div class="feature-list-content feature-list-content-4">
+                        <h3><?php the_title(); ?></h3>
+                        <p><?php the_excerpt(); ?></p>
+                    </div>
                 </div>
             </div>
+            <?php endwhile; ?>
         </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="feature-list-item home-4 mb-50 wow fadeInUp" data-wow-delay=".7s">
-                <div class="feature-list-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ex3.png" alt="">
-                </div>
-                <div class="feature-list-content feature-list-content-4">
-                    <h3>Pixel Precision</h3>
-                    <p>Given stars herb olive eghts you and earth bea you fourt earth second an multip made thats were upon an form</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="feature-list-item home-4 mb-50 wow fadeInUp" data-wow-delay=".3s">
-                <div class="feature-list-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ex4.png" alt="">
-                </div>
-                <div class="feature-list-content feature-list-content-4">
-                    <h3>Creative Design</h3>
-                    <p>Given stars herb olive eghts you and earth bea you fourt earth second an multip made thats were upon an form</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="feature-list-item home-4 mb-50 wow fadeInUp" data-wow-delay=".5s">
-                <div class="feature-list-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ex5.png" alt="">
-                </div>
-                <div class="feature-list-content feature-list-content-4">
-                    <h3>Online Support</h3>
-                    <p>Given stars herb olive eghts you and earth bea you fourt earth second an multip made thats were upon an form</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="feature-list-item home-4 mb-50 wow fadeInUp" data-wow-delay=".7s">
-                <div class="feature-list-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ex6.png" alt="">
-                </div>
-                <div class="feature-list-content feature-list-content-4">
-                    <h3>Easy Customize</h3>
-                    <p>Given stars herb olive eghts you and earth bea you fourt earth second an multip made thats were upon an form</p>
-                </div>
-            </div>
-        </div>
-        </div>
+        
     </div>
 </section>
 <!-- End Feature list area -->
+<?php endif; ?>
 
 <!-- Start Feature Area -->
 <section class="feature-area position-relative pb-110 pt-110 fix">
