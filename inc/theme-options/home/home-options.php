@@ -232,3 +232,48 @@
 			),
         )
     ) );
+
+    Redux::setSection( $opt_name, array(
+        'title'  => esc_html__( 'Brand Slider', 'xisen' ),
+        'id'     => 'home_brand_slider',
+        'desc'   => esc_html__( 'Brand Slider Section', $xisen_textdomain ),
+        // 'icon'   => 'el el-th-large',
+		'subsection'	=>	true,
+        'fields' => array(
+            array(
+                'id'       => 'home_brand_slider_items',
+                'type'     => 'gallery',
+                'title'    => esc_html__( 'Brand Logos', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Select all brand logos', $xisen_textdomain ),
+			),
+        )
+    ) );
+
+    Redux::setSection( $opt_name, array(
+        'title'  => esc_html__( 'Mail Collection Form', 'xisen' ),
+        'id'     => 'home_mail_collection_form',
+        'desc'   => esc_html__( 'Mail Collection Form section', $xisen_textdomain ),
+        // 'icon'   => 'el el-th-large',
+		'subsection'	=>	true,
+        'fields' => array(
+            array(
+                'id'       => 'mail_collection_form_section_heading',
+                'type'     => 'textarea',
+                'rows'      =>  1,
+                'title'    => esc_html__( 'Heading', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Mail Collection Form Heading Text', $xisen_textdomain ),
+			),
+            array(
+                'id'       => 'mail_collection_form_input_placeholder',
+                'type'     => 'text',
+                'title'    => esc_html__( 'Placeholder', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Mail Collection Form Input Placeholder Text', $xisen_textdomain ),
+			),
+            array(
+                'id'       => 'mail_collection_form_submit_btn_label',
+                'type'     => 'text',
+                'title'    => esc_html__( 'Label', $xisen_textdomain ),
+                'desc'     => esc_html__( 'Mail Collection Form Submit Button Label', $xisen_textdomain ),
+			),
+        )
+    ) );
