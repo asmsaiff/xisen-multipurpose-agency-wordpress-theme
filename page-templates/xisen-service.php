@@ -16,9 +16,9 @@
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="section-title-4 mb-70 text-center">
-                    <span>Excellent feature</span>
-                    <h2>Success with every solution</h2>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/line.png" alt="">
+                    <span><?php echo get_xisen_redux_data('service_page_features_section_subtitle'); ?></span>
+                    <h2><?php echo get_xisen_redux_data('service_page_features_section_title'); ?></h2>
+                    <img src="<?php global $xisen_options; echo $xisen_options['service_page_features_section_under_header_divider']['url']; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -198,31 +198,23 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-                <div class="newsletter newsletter-3 mb-100 fix">
-                    <form action="#">
-                        <input type="email" class="wow fadeInLeft" data-wow-delay=".5s" name="newsletter" id="newsletter" placeholder="Enter your email">
-                        <button class="btn btn-squ-bg-red process wow fadeInRight" data-wow-delay=".5s" type="submit">Subscribe Now</button>
-                    </form>
-                </div>
-            </div>
-            <div class="col-12">
+        
+            <?php get_template_part('template-parts/common/mailchimp', 'form'); ?>
+        
+            <div class="col-12 mt-100">
                 <div class="brand-carousel owl-carousel">
+                    <?php
+                        global $xisen_options;
+                        $logo = $xisen_options['home_brand_slider_items'];
+                        $get_post_thumb         =   explode(",", $logo);
+
+                        foreach($get_post_thumb as $image) :
+                            $thumb_url = wp_get_attachment_image_src($image);
+                    ?>
                     <div class="single-brand">
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/01.png" alt=""></a>
+                        <a href="#"><img src="<?php echo $thumb_url[0]; ?>" alt=""></a>
                     </div>
-                    <div class="single-brand">
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/02.png" alt=""></a>
-                    </div>
-                    <div class="single-brand">
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/03.png" alt=""></a>
-                    </div>
-                    <div class="single-brand">
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/04.png" alt=""></a>
-                    </div>
-                    <div class="single-brand">
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/05.png" alt=""></a>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
