@@ -1,20 +1,29 @@
 <?php
     // Single Page
     Redux::setSection( $opt_name, array(
-        'title'  => esc_html__( 'Single Page', 'xisen' ),
-        'id'     => 'single_page',
+        'title'  => esc_html__( 'Page', 'xisen' ),
+        'id'     => 'xisen_page',
         'desc'   => esc_html__( 'Single page options', $xisen_textdomain ),
         'icon'   => 'el el-th-large',
         'fields' => array(
             array(
-                'id'       => 'single_page_header_bg',
+                'id'       => 'page_header_bg',
                 'type'     => 'color',
                 'title'    => __('Color', $opt_name), 
-                'subtitle' => __('Single Page Header Background Color (default: #f0f9ff).', $xisen_textdomain),
+                'subtitle' => __('Page Header Background Color (default: #f0f9ff).', $xisen_textdomain),
                 'default'  => '#f0f9ff',
                 'validate' => 'color',
 			),
+        )
+    ) );
 
+    Redux::setSection( $opt_name, array(
+        'title'  => esc_html__( 'FAQ Page', 'xisen' ),
+        'id'     => 'faq_page',
+        'desc'   => esc_html__( 'Single page options', $xisen_textdomain ),
+        // 'icon'   => 'el el-th-large',
+        'subsection'    =>  true,
+        'fields' => array(
             array(
                 'id'           => 'faq_page_raw_texts',
                 'type'         => 'raw',
