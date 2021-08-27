@@ -58,7 +58,7 @@
 
     // How it Works Section
     Redux::setSection( $opt_name, array(
-        'title'  => esc_html__( 'How it works section', 'xisen' ),
+        'title'  => esc_html__( 'How it works section', $xisen_textdomain ),
         'id'     => 'home_how_it_works',
         'desc'   => esc_html__( 'Home page how it works section', $xisen_textdomain ),
         // 'icon'   => 'el el-th-large',
@@ -155,7 +155,7 @@
 
     // Before Pricing Star Access Area
     Redux::setSection( $opt_name, array(
-        'title'  => esc_html__( 'Before Pricing Star Access Area', 'xisen' ),
+        'title'  => esc_html__( 'Before Pricing Star Access Area', $xisen_textdomain ),
         'id'     => 'home_star_access_before_plan',
         'desc'   => esc_html__( 'Home page before pricing plan star access section', $xisen_textdomain ),
         // 'icon'   => 'el el-th-large',
@@ -204,7 +204,7 @@
 
     // Testimonial Section
     Redux::setSection( $opt_name, array(
-        'title'  => esc_html__( 'Testimonial', 'xisen' ),
+        'title'  => esc_html__( 'Testimonial', $xisen_textdomain ),
         'id'     => 'home_testimonial',
         'desc'   => esc_html__( 'Home page testimonial slider section', $xisen_textdomain ),
         // 'icon'   => 'el el-th-large',
@@ -234,7 +234,7 @@
     ) );
 
     Redux::setSection( $opt_name, array(
-        'title'  => esc_html__( 'Brand Slider', 'xisen' ),
+        'title'  => esc_html__( 'Brand Slider', $xisen_textdomain ),
         'id'     => 'home_brand_slider',
         'desc'   => esc_html__( 'Brand Slider Section', $xisen_textdomain ),
         // 'icon'   => 'el el-th-large',
@@ -250,7 +250,7 @@
     ) );
 
     Redux::setSection( $opt_name, array(
-        'title'  => esc_html__( 'Mail Collection Form', 'xisen' ),
+        'title'  => esc_html__( 'Mail Collection Form', $xisen_textdomain ),
         'id'     => 'home_mail_collection_form',
         'desc'   => esc_html__( 'Mail Collection Form section', $xisen_textdomain ),
         // 'icon'   => 'el el-th-large',

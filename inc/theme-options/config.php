@@ -23,3 +23,4 @@
 
     require_once(__DIR__.'/home/home-options.php');
     require_once(__DIR__.'/page/page-options.php');
+    require_once(__DIR__.'/misc/xisen-social-media.php');
