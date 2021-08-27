@@ -331,21 +331,18 @@
             <div class="row">
                 <div class="col-12">
                     <div class="brand-carousel owl-carousel">
+                        <?php
+                            global $xisen_options;
+                            $logo = $xisen_options['home_brand_slider_items'];
+                            $get_post_thumb         =   explode(",", $logo);
+
+                            foreach($get_post_thumb as $image) :
+                                $thumb_url = wp_get_attachment_image_src($image);
+                        ?>
                         <div class="single-brand">
-                            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/01.png" alt=""></a>
+                            <a href="#"><img src="<?php echo $thumb_url[0]; ?>" alt=""></a>
                         </div>
-                        <div class="single-brand">
-                            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/02.png" alt=""></a>
-                        </div>
-                        <div class="single-brand">
-                            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/03.png" alt=""></a>
-                        </div>
-                        <div class="single-brand">
-                            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/04.png" alt=""></a>
-                        </div>
-                        <div class="single-brand">
-                            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/05.png" alt=""></a>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
@@ -361,7 +358,9 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 ">
                     <div class="section-title text-center mb-70">
-                        <h2>Experience the most simple way to manage business</h2>
+                        <h2>
+                            <?php echo get_xisen_redux_data('mail_collection_form_section_heading'); ?>
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -371,12 +370,12 @@
                     <div id="mc_embed_signup" class="newsletter">
                         <form action="https://s-saif.us20.list-manage.com/subscribe/post?u=4eddfd595c7d4929892a3dbb7&amp;id=ad0b8645aa" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                             <div id="mc_embed_signup_scroll">
-                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="<?php echo get_xisen_redux_data('mail_collection_form_input_placeholder'); ?>" required>
                                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                                     <input type="text" name="b_4eddfd595c7d4929892a3dbb7_ad0b8645aa" tabindex="-1" value="">
                                 </div>
-                                <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">Subscribe</button>
+                                <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"><?php echo get_xisen_redux_data('mail_collection_form_submit_btn_label'); ?></button>
                             </div>
                         </form>
                     </div>
