@@ -42,6 +42,9 @@
 
     function xisen_assets_enqueue() {
         //Style Enqueue
+        // Mailchimp
+        // wp_enqueue_style('mailchimp-css', '//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css');
+
         wp_enqueue_style('aos-css', get_template_directory_uri().'/assets/css/aos.css');
         wp_enqueue_style('slick-css', get_template_directory_uri().'/assets/css/slick.css');
         wp_enqueue_style('magnific-popup-css', get_template_directory_uri().'/assets/css/magnific-popup.css');
