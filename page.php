@@ -33,14 +33,14 @@
     </section>
 <!-- End Breadcrumb Area -->
 <!-- Start FAQ Area -->
-    <section class="faq-area-inner pt-125 pb-125">
+    <section class="faq-area-inner pt-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10">
                     <div class="faq-wrapper-inner mb-130">
                         <?php
                             if(has_post_thumbnail()) {
-                                the_post_thumbnail();
+                                the_post_thumbnail('large', array('class'=>'img-fluid mb-5'));
                             }
 
                             the_content();
@@ -52,54 +52,23 @@
     </section>
 <!-- End FAQ Area -->
 <!-- Start FAQ Form -->
-    <section class="faq-form pb-130">
+    <section class="faq-form">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-12">
                     <div class="section-title-5 mb-50">
                         <span>Contact us</span>
-                        <h2>Do You Have Any <br> Questions</h2>
+                        <h2>Do You Have Any Questions</h2>
                     </div>
+                    <?php
+                        if(get_field('contact_form_shortcode')) :
+                    ?>
                     <div class="faq-form">
-                        <form action="#">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-element">
-                                        <i class="far fa-user"></i>
-                                        <input type="text" placeholder="Your Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-element">
-                                        <i class="far fa-envelope-open"></i>
-                                        <input type="email" placeholder="Your Email">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-element">
-                                        <i class="fas fa-arrow-down"></i>
-                                        <input type="text" placeholder="Your Subject">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-element">
-                                        <i class="fas fa-pencil-alt"></i>
-                                        <textarea name="message" placeholder="Write Message"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-element">
-                                        <button class="btn btn-squ-bg-red" type="submit">Send Comments</button>
-                                    </div>
-                                </div>
-                            </div>
+                        <form action="">
+                            <?php echo do_shortcode(get_field('contact_form_shortcode')); ?>
                         </form>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="banner-img">
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner/faq_banner.jpg" alt=""></a>
-                    </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
