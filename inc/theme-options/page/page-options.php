@@ -18,7 +18,7 @@
     ) );
 
     Redux::setSection( $opt_name, array(
-        'title'  => esc_html__( 'FAQ Page Options', 'xisen' ),
+        'title'  => esc_html__( 'FAQ Page', 'xisen' ),
         'id'     => 'faq_page',
         // 'icon'   => 'el el-th-large',
         'subsection'    =>  true,
@@ -41,7 +41,7 @@
 
     // Service Page
     Redux::setSection( $opt_name, array(
-        'title'  => esc_html__( 'Service Page Options', 'xisen' ),
+        'title'  => esc_html__( 'Service Page', 'xisen' ),
         'id'     => 'service_page',
         // 'icon'   => 'el el-th-large',
         'subsection'    =>  true,
@@ -132,6 +132,46 @@
                 'type'      =>  'text',
                 'title'     =>  __('Sub Title', $opt_name), 
                 'subtitle'  =>  __('Service Page Mail Subscribe Section Subtitle', $xisen_textdomain),
+            ),
+        )
+    ) );
+
+    // Service Page
+    Redux::setSection( $opt_name, array(
+        'title'  => esc_html__( 'Contact Page', 'xisen' ),
+        'id'     => 'contact_page',
+        // 'icon'   => 'el el-th-large',
+        'subsection'    =>  true,
+        'fields' => array(
+            array(
+                'type'      =>  'raw',
+                'title'     =>  __('Form Area', $opt_name),
+            ),
+            array(
+                'id'        =>  'contact_page_form_section_title',
+                'type'      =>  'text',
+                'title'     =>  __('Heading', $opt_name), 
+                'subtitle'  =>  __('Contact Page Form Section Heading Text', $xisen_textdomain),
+            ),
+            array(
+                'id'        =>  'contact_page_form_section_subtitle',
+                'type'      =>  'text',
+                'title'     =>  __('Sub Title', $opt_name), 
+                'subtitle'  =>  __('Contact Page Form Section Subtitle', $xisen_textdomain),
+            ),
+            array(
+                'id'        =>  'contact_page_form_section_short_desc',
+                'type'      =>  'editor',
+                'title'     =>  __('Short Description', $opt_name), 
+                'subtitle'  =>  __('Contact Page Form Section Short Description', $xisen_textdomain),
+            ),
+            array(
+                'id'        =>  'contact_page_map',
+                'type'      =>  'textarea',
+                'rows'      =>  3,
+                'title'     =>  __('Google Maps Iframe', $opt_name), 
+                'subtitle'  =>  __('Copy and paste iframe tag to embed map', $xisen_textdomain),
+                'desc'      =>  __('Change width 100% from the iframe tag to see full width map.')
             ),
         )
     ) );

@@ -17,10 +17,16 @@
                 <div class="col-xl-4 col-lg-5 offset-xl-1">
                     <div class="contact-info-2 mb-30">
                         <div class="section-title-5 mb-20">
-                            <span>Any Questions?</span>
-                            <h2>Send us message for any need.</h2>
+                            <span>
+                                <?php echo get_xisen_redux_data('contact_page_form_section_subtitle'); ?>
+                            </span>
+                            <h2>
+                                <?php echo get_xisen_redux_data('contact_page_form_section_title'); ?>
+                            </h2>
                         </div>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiotam rem aperiam, eaqueipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem</p>
+                        <p>
+                            <?php echo get_xisen_redux_data('contact_page_form_section_short_desc'); ?>
+                        </p>
                         <div class="contact-social mt-30">
                             <a class="fb" href="#" target="_blank" data-toggle="tooltip" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a class="ld" href="#" target="_blank" data-toggle="tooltip" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
@@ -41,12 +47,8 @@
 <!-- End Contact Area -->
 <!-- Star Contact Map -->
     <section class="contact-map">
-        <div id="contact-map"></div>
+        <?php echo get_xisen_redux_data('contact_page_map'); ?>
     </section>
-<!-- End Contact Map -->
-</main>
-
-    <?php get_template_part('template-parts/common/page-contact-form'); ?>
 </main>
 
 <?php
