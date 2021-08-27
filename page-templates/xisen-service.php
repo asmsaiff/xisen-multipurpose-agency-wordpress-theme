@@ -18,7 +18,7 @@
     if($xisen_features->have_posts()) :
 ?>
 <!-- Start Feature list area -->
-<section class="feature-list-area home-4 pt-150">
+<section class="feature-list-area home-4 pt-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
@@ -55,7 +55,7 @@
 <?php endif; ?>
 
 <!-- Start Feature Area -->
-<section class="feature-area position-relative pb-110 pt-110 fix">
+<section class="feature-area position-relative pb-5 pt-110 fix">
     <div class="shape-action">
         <span class="shape shape-circle shape-c-2 "></span>
         <img class="shape shape-af-1  " src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape-tri.png" alt="">
@@ -65,18 +65,26 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="feature-content home-4 mb-30 wow fadeInLeft" data-wow-delay=".5">
-                    <span>Advance feature</span>
-                    <h2>Easy and perfect solution for your app</h2>
-                    <p>Firmament after it our female herb so greatful signs days saw that fry stars after open form given thing good.</p>
-                    <p>Spirit beginning gathering, given us esser land saying god under said fill grass whales made female second darknessbring, to from open grass you sea above moving herb cant</p>
+                    <span>
+                        <?php echo get_xisen_redux_data('service_page_adv_features_section_subtitle'); ?>
+                    </span>
+                    <h2>
+                        <?php echo get_xisen_redux_data('service_page_adv_features_section_title'); ?>
+                    </h2>
+                    
+                    <?php echo get_xisen_redux_data('service_page_adv_features_section_content'); ?>
+                    <?php if(get_xisen_redux_data('service_page_adv_features_section_btn_url')) : ?>
                     <div class="feature-btn" data-aos="fade-up">
-                        <a href="#" class="btn btn-squ-orange">About more</a>
+                        <a href="<?php echo get_xisen_redux_data('service_page_adv_features_section_btn_url'); ?>" class="btn btn-squ-orange">
+                            <?php echo get_xisen_redux_data('service_page_adv_features_section_btn_label'); ?>
+                        </a>
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="feature-img home-4 mb-30 wow fadeInRight" data-wow-delay="1s">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bg/add.png" alt="">
+                    <img src="<?php global $xisen_options; echo $xisen_options['service_page_adv_features_section_right_side_image']['url']; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -84,12 +92,15 @@
 </section>
 <!-- End Feature Area -->
 
+<?php
+    if(have_rows('xisenworking_process')) : 
+?>
 <!-- Start Hw Area -->
 <section class="hw-area fix">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
-                <div class="section-title-4 mb-70 text-center">
+                <div class="section-title-4 text-center">
                     <span>How we works</span>
                     <h2>Easy Working Process</h2>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/line.png" alt="">
@@ -97,54 +108,32 @@
             </div>
         </div>
         <div class="row">
+            <?php
+                while(have_rows('xisenworking_process')) :
+                    the_row();
+
+                    $working_process_item_title         = get_sub_field('workingprocess_title');
+                    $working_process_item_content       = get_sub_field('workingprocess_content');
+                    $working_process_item_icon          = get_sub_field('workingprocess_icon');
+            ?>
             <div class="col-lg-3 col-md-6">
                 <div class="feature-list-item feature-list-item-4_1 text-center mb-30 wow fadeInUp" data-wow-delay=".3s">
                     <div class="feature-list-icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/hw-1.png" alt="">
+                        <img src="<?php echo $working_process_item_icon; ?>" alt="">
                     </div>
                     <div class="feature-list-content feature-list-content-4_1">
-                        <h3>Market Research</h3>
-                        <p>Days for two every where does dreen fruitful also fruitful seasons un won the fowl light deep sixth dominion.</p>
+                        <h3><?php echo $working_process_item_title; ?></h3>
+                        <p><?php echo $working_process_item_content; ?></p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="feature-list-item feature-list-item-4_1 text-center mb-30 wow fadeInUp" data-wow-delay=".5s">
-                    <div class="feature-list-icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/hw-2.png" alt="">
-                    </div>
-                    <div class="feature-list-content feature-list-content-4_1">
-                        <h3>Create Wireframe</h3>
-                        <p>Days for two every where does dreen fruitful also fruitful seasons un won the fowl light deep sixth dominion.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="feature-list-item feature-list-item-4_1 text-center mb-30 wow fadeInUp" data-wow-delay=".7s">
-                    <div class="feature-list-icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/hw-3.png" alt="">
-                    </div>
-                    <div class="feature-list-content feature-list-content-4_1">
-                        <h3>Creative Design</h3>
-                        <p>Days for two every where does dreen fruitful also fruitful seasons un won the fowl light deep sixth dominion.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="feature-list-item feature-list-item-4_1 text-center mb-30 wow fadeInUp" data-wow-delay=".9s">
-                    <div class="feature-list-icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/hw-4.png" alt="">
-                    </div>
-                    <div class="feature-list-content feature-list-content-4_1">
-                        <h3>Creative Design</h3>
-                        <p>Days for two every where does dreen fruitful also fruitful seasons un won the fowl light deep sixth dominion.</p>
-                    </div>
-                </div>
-            </div>
+            <?php endwhile; ?>
         </div>
     </div>
 </section>
 <!-- End Hw Area -->
+
+<?php endif; ?>
 
 <!-- Start Brands Area -->
 <section class="brand-area brand-area-3 pt-150 pb-150" data-background="assets/img/bg/subs-bg.png">
@@ -152,8 +141,10 @@
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="section-title-3 mb-70 text-center">
-                    <span>Permanent Clients</span>
-                    <h2>Worldwide 100+ clients using our service.</h2>
+                    <span>
+                        <?php echo get_xisen_redux_data('service_page_mail_subscribe_section_subtitle'); ?>
+                    </span>
+                    <h2><?php echo get_xisen_redux_data('service_page_mail_subscribe_section_title'); ?></h2>
                 </div>
             </div>
         </div>
