@@ -52,6 +52,9 @@
     </section>
 <!-- End FAQ Area -->
 <!-- Start FAQ Form -->
+    <?php
+        if(get_field('contact_form_shortcode')) :
+    ?>
     <section class="faq-form">
         <div class="container">
             <div class="row">
@@ -60,19 +63,17 @@
                         <span>Contact us</span>
                         <h2>Do You Have Any Questions</h2>
                     </div>
-                    <?php
-                        if(get_field('contact_form_shortcode')) :
-                    ?>
+                    
                     <div class="faq-form">
                         <form action="">
                             <?php echo do_shortcode(get_field('contact_form_shortcode')); ?>
                         </form>
                     </div>
-                    <?php endif; ?>
                 </div>
             </div>
         </div>
     </section>
+    <?php endif; ?>
 <!-- End FAQ Form -->
 </main>
 
