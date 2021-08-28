@@ -136,7 +136,7 @@
         )
     ) );
 
-    // Service Page
+    // Contact Page
     Redux::setSection( $opt_name, array(
         'title'  => esc_html__( 'Contact Page', $xisen_textdomain ),
         'id'     => 'contact_page',
@@ -173,5 +173,62 @@
                 'subtitle'  =>  __('Copy and paste iframe tag to embed map', $xisen_textdomain),
                 'desc'      =>  __('Change width 100% from the iframe tag to see full width map.')
             ),
+        )
+    ) );
+
+    // About Page
+    Redux::setSection( $opt_name, array(
+        'title'  => esc_html__( 'About Page', $xisen_textdomain ),
+        'id'     => 'about_page',
+        // 'icon'   => 'el el-th-large',
+        'subsection'    =>  true,
+        'fields' => array(
+            array(
+                'type'      =>  'raw',
+                'title'     =>  __('Feature Area', $$xisen_textdomain),
+            ),
+            array(
+                'id'        =>  'about_page_form_section_title',
+                'type'      =>  'text',
+                'title'     =>  __('Heading', $xisen_textdomain), 
+                'subtitle'  =>  __('About Page Feature Section Heading Text', $xisen_textdomain),
+            ),
+            array(
+                'id'        =>  'about_page_form_section_subtitle',
+                'type'      =>  'text',
+                'title'     =>  __('Sub Title', $xisen_textdomaine), 
+                'subtitle'  =>  __('About Page Feature Section Subtitle', $xisen_textdomain),
+            ),
+            array(
+                'id'        =>  'about_page_form_section_short_desc',
+                'type'      =>  'editor',
+                'title'     =>  __('Short Description', $xisen_textdomain), 
+                'subtitle'  =>  __('About Page Feature Section Short Description', $xisen_textdomain),
+            ),
+            array(
+                'id'        =>  'about_page_feature_left_image',
+                'type'      =>  'media',
+                'url'      =>  true,
+                'title'     =>  __('Image', $xisen_textdomain),
+                'desc'     =>  __('Left side image', $xisen_textdomain),
+            ),
+
+            array(
+                'type'      =>  'raw',
+                'title'     =>  __('Soft List Area', $$xisen_textdomain),
+            ),
+            array(
+                'id'        =>  'about_page_soft_list_area_title',
+                'title'     =>  __('Title', $xisen_textdomain),
+                'desc'      =>  __('Soft Area Title', $xisen_textdomain),
+                'type'      =>  'text',
+            ),
+            array(
+                'id'        =>  'about_page_soft_list_area_short_desc',
+                'title'     =>  __('Short Description', $xisen_textdomain),
+                'desc'      =>  __('Soft Area Short Description', $xisen_textdomain),
+                'type'      =>  'textarea',
+                'rows'      =>  3,
+            )
         )
     ) );
