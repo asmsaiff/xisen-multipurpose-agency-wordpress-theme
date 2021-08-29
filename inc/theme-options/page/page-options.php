@@ -229,6 +229,32 @@
                 'desc'      =>  __('Soft Area Short Description', $xisen_textdomain),
                 'type'      =>  'textarea',
                 'rows'      =>  3,
-            )
+            ),
+            array(
+                'id'          => 'soft-list-area-grid',
+                'type'        => 'slides',
+                'title'       => __('Soft List Grids', $xisen_textdomain),
+                'desc'        => __('Create software list grid here.', $xisen_textdomain),
+                'placeholder' => array(
+                    'title'       => __('Title', $xisen_textdomain),
+                    'description' => __('Description', $xisen_textdomain),
+                    'url'         => __('Link', $xisen_textdomain),
+                ),
+            ),
+
+            array(
+                'type'      =>  'raw',
+                'title'     =>  __('About Page Testimonials', $$xisen_textdomain),
+            ),
+            array(
+                'id'          => 'about-page-testimonials',
+                'type'        => 'slides',
+                'title'       => __('Testimonials', $xisen_textdomain),
+                'placeholder' => array(
+                    'title'       => __('Name', $xisen_textdomain),
+                    'description' => __('Testimonial', $xisen_textdomain),
+                    'url'         => __('Link', $xisen_textdomain),
+                ),
+            ),
         )
     ) );

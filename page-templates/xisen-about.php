@@ -53,44 +53,30 @@
                 </div>
             </div>
             <div class="row">
-            <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
-                <div class="soft-list-item home-5 mb-30 text-center wow fadeInUp" data-wow-delay=".3s">
-                    <div class="soft-list-icon mb-35">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ss-01.png" alt="">
-                    </div>
-                    <div class="soft-list-content">
-                        <h3>Unlimited Content</h3>
-                        <p>Stars air over land bring life female stars dry be abundantly may green te which fill after our behold very god spir.</p>
-                    </div>
-                    </div>
-                </div>
-            <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
-                <div class="soft-list-item home-5 mb-30 text-center wow fadeInUp" data-wow-delay=".5s">
-                    <div class="soft-list-icon mb-35">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ss-02.png" alt="">
-                    </div>
-                    <div class="soft-list-content">
-                        <h3>Easy To Access</h3>
-                        <p>Stars air over land bring life female stars dry be abundantly may green te which fill after our behold very god spir.</p>
-                    </div>
+                <?php
+                    global $xisen_options;
+
+                    for($i = 0; $i < 3; $i++) :
+                ?>
+                <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
+                    <div class="soft-list-item home-5 mb-30 text-center wow fadeInUp" data-wow-delay=".3s">
+                        <div class="soft-list-icon mb-35">
+                            <img src="<?php echo $xisen_options['soft-list-area-grid'][$i]['image']; ?>" alt="">
+                        </div>
+                        <div class="soft-list-content">
+                            <h3><?php echo $xisen_options['soft-list-area-grid'][$i]['title']; ?></h3>
+                            <p><?php echo $xisen_options['soft-list-area-grid'][$i]['description']; ?></p>
+                        </div>
                     </div>
                 </div>
-            <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0">
-                <div class="soft-list-item home-5 mb-30 text-center wow fadeInUp" data-wow-delay=".7s">
-                    <div class="soft-list-icon mb-35">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ss-03.png" alt="">
-                    </div>
-                    <div class="soft-list-content">
-                        <h3>Save Your Time</h3>
-                        <p>Stars air over land bring life female stars dry be abundantly may green te which fill after our behold very god spir.</p>
-                    </div>
-                    </div>
-                </div>
-            </div>
+                <?php endfor; ?>
             </div>
         </div>
     </section>
     <!-- End Soft list area -->
+    <?php
+        if(get_field('testimonial_section')) :
+    ?>
     <!-- Start Testimonial Area -->
     <section class="testimonial-area testimonial-area-3 pt-140 pb-140 fix gray-bg position-relative fix ">
         <div class="shape-slider">
@@ -163,6 +149,7 @@
         </div>
     </section>
     <!-- End Testimonial Area -->
+    <?php endif; ?>
 
     <!-- Start Brands Area -->
     <section class="brand-area pt-140  pb-90 position-relative">
