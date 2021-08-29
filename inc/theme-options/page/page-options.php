@@ -247,14 +247,16 @@
                 'title'     =>  __('About Page Testimonials', $$xisen_textdomain),
             ),
             array(
-                'id'          => 'about-page-testimonials',
-                'type'        => 'slides',
-                'title'       => __('Testimonials', $xisen_textdomain),
-                'placeholder' => array(
-                    'title'       => __('Name', $xisen_textdomain),
-                    'description' => __('Testimonial', $xisen_textdomain),
-                    'url'         => __('Link', $xisen_textdomain),
-                ),
+                'id'        =>  'about_page_testimonial_section_title',
+                'type'      =>  'text',
+                'title'     =>  __('Heading', $xisen_textdomain), 
+                'subtitle'  =>  __('About Page Testimonial Section Heading Text', $xisen_textdomain),
+            ),
+            array(
+                'id'        =>  'about_page_testimonial_section_subtitle',
+                'type'      =>  'text',
+                'title'     =>  __('Sub Title', $xisen_textdomaine), 
+                'subtitle'  =>  __('About Page Testimonial Section Subtitle', $xisen_textdomain),
             ),
         )
     ) );

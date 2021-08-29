@@ -89,60 +89,50 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-title-3 mb-70 text-center">
-                        <span>testimonials</span>
-                        <h2>Our worldwide happy user says about software</h2>
+                        <span><?php echo get_xisen_redux_data('about_page_testimonial_section_subtitle'); ?></span>
+                        <h2><?php echo get_xisen_redux_data('about_page_testimonial_section_title'); ?></h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
                     <div class="testimonial-nav mb-30">
+                        <?php
+                            if(have_rows('about_page_testimonial_section')) :
+                                while(have_rows('about_page_testimonial_section')) :
+                                    the_row();
+
+                                    $testimonial_thumb = get_sub_field('author_image');
+                        ?>
                         <div class="testimonial-thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/img3.png" alt="">
+                            <img src="<?php echo $testimonial_thumb; ?>" alt="">
                         </div>
-                        <div class="testimonial-thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/img3.png" alt="">
-                        </div>
-                        <div class="testimonial-thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/img3.png" alt="">
-                        </div>
-                        <div class="testimonial-thumb">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/img3.png" alt="">
-                        </div>
+                        <?php 
+                                endwhile;
+                            endif;
+                        ?>
                     </div>
                     <div class="testimonial-active">
+                        <?php
+                            if(have_rows('about_page_testimonial_section')) :
+                                while(have_rows('about_page_testimonial_section')) :
+                                    the_row();
+
+                                    $name           =   get_sub_field('author_name');
+                                    $designation    =   get_sub_field('designation');
+                                    $content        =   get_sub_field('testimonial_content');
+                        ?>
                         <div class="testimonial-item text-center">
                             <div class="designation mb-30">
-                                <h3>- Tanvir Ahamed -</h3>
-                                <span>Digital Marketer</span>
+                                <h3>- <?php echo $name; ?> -</h3>
+                                <span><?php echo $designation; ?></span>
                             </div>
-                            <p>“ Days for two every wherein green fruitful also fruitful was seasons unto won't the fowl
-                                light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree disappear relax bring Cattle fish cattle first midst moved greater divided so bring.”</p>
+                            <p><?php echo $content; ?></p>
                         </div>
-                        <div class="testimonial-item text-center">
-                            <div class="designation mb-30">
-                                <h3>- Mousumi Ahamed -</h3>
-                                <span>Graphic Designer</span>
-                            </div>
-                            <p>“ Fruitful was seasons unto won't the fowl light deep more then regular
-                                before piece sixth them dominion cattle fish cattle first midst moved greater divided so
-                                dove nature tree bisapper relan days for two every wherein green fruitful also
-                                bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                        </div>
-                        <div class="testimonial-item text-center">
-                            <div class="designation mb-30">
-                                <h3>- Tanvir Ahamed -</h3>
-                                <span>Web Developer</span>
-                            </div>
-                            <p>“ Days for two every wherein green fruitful also fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree disappear relax bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                        </div>
-                        <div class="testimonial-item text-center">
-                            <div class="designation mb-30">
-                                <h3>- Walid Hossaing -</h3>
-                                <span>Software Engineer</span>
-                            </div>
-                            <p>“ Fruitful was seasons unto won't the fowl light deep more then regular before piece sixth them dominion cattle fish cattle first midst moved greater divided so dove nature tree bisapper relan days for two every wherein green fruitful also bring Cattle fish cattle first midst moved greater divided so bring.”</p>
-                        </div>
+                        <?php
+                                endwhile;
+                            endif;
+                        ?>
                     </div>
                 </div>
             </div>
