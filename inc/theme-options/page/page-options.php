@@ -156,7 +156,7 @@
             array(
                 'id'        =>  'contact_page_form_section_subtitle',
                 'type'      =>  'text',
-                'title'     =>  __('Sub Title', $xisen_textdomaine), 
+                'title'     =>  __('Sub Title', $xisen_textdomain), 
                 'subtitle'  =>  __('Contact Page Form Section Subtitle', $xisen_textdomain),
             ),
             array(
@@ -196,7 +196,7 @@
             array(
                 'id'        =>  'about_page_form_section_subtitle',
                 'type'      =>  'text',
-                'title'     =>  __('Sub Title', $xisen_textdomaine), 
+                'title'     =>  __('Sub Title', $xisen_textdomain), 
                 'subtitle'  =>  __('About Page Feature Section Subtitle', $xisen_textdomain),
             ),
             array(
@@ -255,8 +255,31 @@
             array(
                 'id'        =>  'about_page_testimonial_section_subtitle',
                 'type'      =>  'text',
-                'title'     =>  __('Sub Title', $xisen_textdomaine), 
+                'title'     =>  __('Sub Title', $xisen_textdomain), 
                 'subtitle'  =>  __('About Page Testimonial Section Subtitle', $xisen_textdomain),
+            ),
+
+            array(
+                'type'      =>  'raw',
+                'title'     =>  __('About Page Brand Area', $$xisen_textdomain),
+            ),
+            array(
+                'id'        =>  'about_page_brand_area_title',
+                'type'      =>  'text',
+                'title'     =>  __('Heading', $xisen_textdomain), 
+                'subtitle'  =>  __('About Page Area Title', $xisen_textdomain),
+            ),
+            array(
+                'id'        =>  'about_page_brand_area_subtitle',
+                'type'      =>  'text',
+                'title'     =>  __('Sub Title', $xisen_textdomain), 
+                'subtitle'  =>  __('About Page Brand Area Subtitle', $xisen_textdomain),
+            ),
+            array(
+                'id'        =>  'about_page_brand_area_logos',
+                'type'      =>  'gallery',
+                'title'     =>  __('Logos', $xisen_textdomain), 
+                'subtitle'  =>  __('About Page Brand Area Logos', $xisen_textdomain),
             ),
         )
     ) );
