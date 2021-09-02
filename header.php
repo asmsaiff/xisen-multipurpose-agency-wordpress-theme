@@ -16,7 +16,7 @@
 </head>
 <body <?php body_class(); ?>>
     <!-- preloader  -->
-        <!-- <div id="preloader">
+        <div id="preloader">
             <div id="ctn-preloader" class="ctn-preloader">
                 <div class="animation-preloader">
                     <div class="spinner"></div>
@@ -55,13 +55,14 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     <!-- preloader end -->
 <!-- Start Header Area -->
     <header id="header-sticky" class="header-area <?php
         if(!is_single(is_post_type_archive('xisen_services'))) : echo 'header-absolute'; endif;
         if(is_single(is_post_type_archive('xisen_services'))) : echo 'home-2'; endif;
-        if(is_page()) : echo 'home-2'; endif; ?>"
+        if(is_page()) : echo 'home-2'; endif;
+        if(is_home()) : echo 'home-2'; endif; ?>"
         
         >
         <div class="container">
