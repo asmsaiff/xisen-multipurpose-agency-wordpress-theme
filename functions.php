@@ -92,3 +92,8 @@
             return $default;
         }
     }
+
+    function excerpt_char_limit($e){
+		return substr($e,0,250);
+	}
+	add_filter('get_the_excerpt','excerpt_char_limit');
