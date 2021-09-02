@@ -14,7 +14,9 @@
             <div class="row text-center">
                 <div class="col-md-12">
                     <div class="page-title page-title-2 mb-30">
-                        <h4>Blog 3 Columns</h4>
+                        <h4>
+                            <?php $our_title = get_the_title( get_option('page_for_posts', true) ); echo $our_title; ?>
+                        </h4>
                     </div>
                     <div class="breadcrumb-list breadcrumb-list-2 mb-30">
                         <ul>
@@ -28,153 +30,47 @@
     </section>
 <!-- End Breadcrumb Area -->
 <!-- Start Blog Area -->
+<?php
+    if(have_posts()) :
+?>
     <section class="blog-area pt-150 pb-80">
         <div class="container">
             <div class="row">
+                <?php
+                    while(have_posts()) :
+                        the_post(  );
+                ?>
                 <div class="col-lg-4 col-md-6">
                     <article class="single-blog-post image-formate mb-50">
+                        <?php if(has_post_thumbnail()) : ?>
                         <div class="blog-post-img mb-30">
                             <a href="#">
-                                <img src="assets/img/blog/b1.jpg" alt="">
+                                <?php the_post_thumbnail('large', array('class'=>'img-fluid')); ?>
                             </a>
                         </div>
+                        <?php endif; ?>
                         <div class="blog-post-content">
                             <div class="blog-post-meta mb-15">
-                                <span><a href="#"><i class="far fa-user"></i> Diboli B. Joly</a></span>
+                                <span><a href="#"><i class="far fa-user"></i><?php the_author(); ?></a></span>
                                 <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
                             </div>
                             <h3 class="post-title post-title-sm">
-                                <a href="#">Exploring The Latest Web Design Trends Together With Be?</a>
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </h3>
                             <div class="post-text mb-20">
-                                <p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p></p>
+                                <p>
+                                    <?php echo get_the_excerpt(); ?>
+                                </p>
                             </div>
                             <div class="post-btn">
-                                <a href="#" class="btn btn-inline">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                                <a href="<?php the_permalink(); ?>" class="btn btn-inline">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
                             </div>
                         </div>
                     </article>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <article class="single-blog-post image-formate mb-50">
-                        <div class="blog-post-img mb-30">
-                            <a href="#">
-                                <img src="assets/img/blog/b2.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="blog-post-content">
-                            <div class="blog-post-meta mb-15">
-                                <span><a href="#"><i class="far fa-user"></i> Diboli B. Joly</a></span>
-                                <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
-                            </div>
-                            <h3 class="post-title post-title-sm">
-                                <a href="#">Exploring The Latest Web Design Trends Together With Be?</a>
-                            </h3>
-                            <div class="post-text mb-20">
-                                <p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p></p>
-                            </div>
-                            <div class="post-btn">
-                                <a href="#" class="btn btn-inline">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <article class="single-blog-post image-formate mb-50">
-                        <div class="blog-post-img mb-30">
-                            <a href="#">
-                                <img src="assets/img/blog/b3.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="blog-post-content">
-                            <div class="blog-post-meta mb-15">
-                                <span><a href="#"><i class="far fa-user"></i> Diboli B. Joly</a></span>
-                                <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
-                            </div>
-                            <h3 class="post-title post-title-sm">
-                                <a href="#">Exploring The Latest Web Design Trends Together With Be?</a>
-                            </h3>
-                            <div class="post-text mb-20">
-                                <p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p></p>
-                            </div>
-                            <div class="post-btn">
-                                <a href="#" class="btn btn-inline">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <article class="single-blog-post image-formate mb-50">
-                        <div class="blog-post-img mb-30">
-                            <a href="#">
-                                <img src="assets/img/blog/b4.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="blog-post-content">
-                            <div class="blog-post-meta mb-15">
-                                <span><a href="#"><i class="far fa-user"></i> Diboli B. Joly</a></span>
-                                <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
-                            </div>
-                            <h3 class="post-title post-title-sm">
-                                <a href="#">Exploring The Latest Web Design Trends Together With Be?</a>
-                            </h3>
-                            <div class="post-text mb-20">
-                                <p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p></p>
-                            </div>
-                            <div class="post-btn">
-                                <a href="#" class="btn btn-inline">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <article class="single-blog-post image-formate mb-50">
-                        <div class="blog-post-img mb-30">
-                            <a href="#">
-                                <img src="assets/img/blog/b5.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="blog-post-content">
-                            <div class="blog-post-meta mb-15">
-                                <span><a href="#"><i class="far fa-user"></i> Diboli B. Joly</a></span>
-                                <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
-                            </div>
-                            <h3 class="post-title post-title-sm">
-                                <a href="#">Exploring The Latest Web Design Trends Together With Be?</a>
-                            </h3>
-                            <div class="post-text mb-20">
-                                <p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p></p>
-                            </div>
-                            <div class="post-btn">
-                                <a href="#" class="btn btn-inline">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <article class="single-blog-post image-formate mb-50">
-                        <div class="blog-post-img mb-30">
-                            <a href="#">
-                                <img src="assets/img/blog/b6.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="blog-post-content">
-                            <div class="blog-post-meta mb-15">
-                                <span><a href="#"><i class="far fa-user"></i> Diboli B. Joly</a></span>
-                                <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
-                            </div>
-                            <h3 class="post-title post-title-sm">
-                                <a href="#">Exploring The Latest Web Design Trends Together With Be?</a>
-                            </h3>
-                            <div class="post-text mb-20">
-                                <p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p></p>
-                            </div>
-                            <div class="post-btn">
-                                <a href="#" class="btn btn-inline">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+                <?php
+                    endwhile;
+                ?>
             </div>
             <div class="row">
                 <div class="col-12">
@@ -193,6 +89,7 @@
         </div>
     </section>
 <!-- End Blog Area -->
+<?php endif; ?>
 </main>
 
 <?php
