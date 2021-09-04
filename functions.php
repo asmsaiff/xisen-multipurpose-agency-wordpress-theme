@@ -100,4 +100,44 @@
 	}
 	add_filter('get_the_excerpt','excerpt_char_limit');
 
-    
+    // Breadcrumb
+    function get_the_breadcrumb() {
+        global $post;
+        echo '<ul id="breadcrumbs">';
+        if (!is_home()) {
+            echo '<li><a href="';
+            echo get_option('home');
+            echo '">';
+            echo '<i class="fas fa-home"></i> Home';
+            echo '</a></li><li>/</li>';
+            if (is_category() || is_single()) {
+                echo '<li>';
+                the_category(' </li><li class="active"> / </li><li> ');
+                if (is_single()) {
+                    echo '</li><li class="active"> / </li><li>';
+                    the_title();
+                    echo '</li>';
+                }
+            } elseif (is_page()) {
+                if($post->post_parent){
+                    $anc = get_post_ancestors( $post->ID );
+                    $title = get_the_title();
+                    foreach ( $anc as $ancestor ) {
+                        $output = '<li><a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="active">/</li>';
+                    }
+                    echo $output;
+                    echo '<strong title="'.$title.'"> '.$title.'</strong>';
+                } else {
+                    echo '<li class="active">'.get_the_title().'</li>';
+                }
+            }
+        }
+        elseif (is_tag()) {single_tag_title();}
+        elseif (is_day()) {echo'<li class="active">Archive for '; the_time('F jS, Y'); echo'</li>';}
+        elseif (is_month()) {echo'<li class="active">Archive for '; the_time('F, Y'); echo'</li>';}
+        elseif (is_year()) {echo'<li class="active">Archive for '; the_time('Y'); echo'</li>';}
+        elseif (is_author()) {echo'<li class="active">Author Archive'; echo'</li>';}
+        elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo '<li class="active">Blog Archives'; echo'</li>';}
+        elseif (is_search()) {echo'<li class="active">Search Results'; echo'</li>';}
+        echo '</ul>';
+    }

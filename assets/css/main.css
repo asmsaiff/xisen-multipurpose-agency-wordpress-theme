@@ -1457,13 +1457,12 @@ input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], in
     position: relative;
     line-height: 1;
     padding-left: 5px;
-    margin-left: 10px;
+    margin-left: 3px;
 }
 .breadcrumb-list li:first-child {
     padding: 0;
     margin: 0;
 }
-.breadcrumb-list li:before {content: "-";color: #7b8491;position: absolute;left: -6px;font-size: 15px;top: 50%;-webkit-transform: translateY(-50%);transform: translateY(-50%);}
 
 .breadcrumb-list li:first-child:before {
     display: none;
