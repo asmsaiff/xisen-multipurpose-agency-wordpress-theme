@@ -4,7 +4,7 @@
 
 <main>
 <!-- Start Breadcrumb Area -->
-    <section class="breadcrumb-area breadcrumb-area-2 position-relative pt-150 pb-120 fix" data-background="assets/img/bg/page-title-bg-2.jpg" data-overlay="6">
+    <section class="breadcrumb-area breadcrumb-area-2 position-relative pt-150 pb-120 fix" data-background="<?php header_image(); ?>" data-overlay="6">
         <div class="shape-action">
             <img class="shape shape-2  " src="assets/img/shape/shape2.png" alt="">
             <img class="shape shape-4 " src="assets/img/shape/shape3.png" alt="">
