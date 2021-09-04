@@ -118,7 +118,7 @@
                     the_title();
                     echo '</li>';
                 }
-            } elseif (is_page()) {
+            } elseif (is_page() || is_home()) {
                 if($post->post_parent){
                     $anc = get_post_ancestors( $post->ID );
                     $title = get_the_title();
@@ -126,7 +126,7 @@
                         $output = '<li><a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="active">/</li>';
                     }
                     echo $output;
-                    echo '<strong title="'.$title.'"> '.$title.'</strong>';
+                    echo '<li class="active">'.$title.'</li>';
                 } else {
                     echo '<li class="active">'.get_the_title().'</li>';
                 }
@@ -139,5 +139,6 @@
         elseif (is_author()) {echo'<li class="active">Author Archive'; echo'</li>';}
         elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo '<li class="active">Blog Archives'; echo'</li>';}
         elseif (is_search()) {echo'<li class="active">Search Results'; echo'</li>';}
+        elseif (is_home()) { echo '<span style="color: #fff;"><i class="fas fa-home"></i> Home  / </span>'; echo'<li class="active">Blog'; echo'</li>';}
         echo '</ul>';
     }
