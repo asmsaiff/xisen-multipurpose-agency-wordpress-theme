@@ -85,6 +85,7 @@
     }
     add_action( 'wp_enqueue_scripts', 'xisen_assets_enqueue' );
 
+    // Redux Data
     function get_xisen_redux_data($key, $default = '') {
         if(class_exists('Redux')) {
             return Redux::get_option('xisen_options', $key, $default);
@@ -93,7 +94,10 @@
         }
     }
 
+    // Limit Character of Excerpt
     function excerpt_char_limit($e){
 		return substr($e,0,250);
 	}
 	add_filter('get_the_excerpt','excerpt_char_limit');
+
+    
