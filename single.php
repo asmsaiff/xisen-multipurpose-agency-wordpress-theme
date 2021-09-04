@@ -18,10 +18,7 @@
                         <h4>Blog Details</h4>
                     </div>
                     <div class="breadcrumb-list breadcrumb-list-2 mb-30">
-                        <ul>
-                            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                            <li class="active">Blog Details</li>
-                        </ul>
+                        <?php get_the_breadcrumb(); ?>
                     </div>
                 </div>
             </div>

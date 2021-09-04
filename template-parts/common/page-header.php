@@ -15,10 +15,7 @@
             </div>
             <div class="col-md-6">
                 <div class="breadcrumb-list text-md-right mb-30">
-                    <ul>
-                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                        <li class="active">Service</li>
-                    </ul>
+                    <?php get_the_breadcrumb(); ?>
                 </div>
             </div>
         </div>
