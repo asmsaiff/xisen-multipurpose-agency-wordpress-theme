@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-xl-2 col-lg-3 col-md-6">
                         <div class="footer-widget mb-40">
-                            <h3>About Us</h3>
+                            <h3><?php _e('About Us', 'xisen'); ?></h3>
                             <ul class="footer-links">
                                 <li><a href="#">Managed Website</a></li>
                                 <li><a href="#">Manage Reputation</a></li>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="col-xl-2 col-lg-3 col-md-6">
                         <div class="footer-widget mb-40">
-                            <h3>Quick Links</h3>
+                            <h3><?php _e('Quick Links', 'xisen'); ?></h3>
                             <ul class="footer-links">
                                 <li><a href="#">Store Hours</a></li>
                                 <li><a href="#">Brand Assets</a></li>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="col-xl-2 col-lg-3 col-md-6">
                         <div class="footer-widget mb-40">
-                            <h3>My Account</h3>
+                            <h3><?php _e('My Account', 'xisen'); ?></h3>
                             <ul class="footer-links">
                                 <li><a href="#">Press Inquiries</a></li>
                                 <li><a href="#">Media</a></li>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="col-xl-2 col-lg-3 col-md-6">
                         <div class="footer-widget mb-40">
-                            <h3>Resources</h3>
+                            <h3><?php _e('Resources', 'xisen'); ?></h3>
                             <ul class="footer-links">
                                 <li><a href="#">Application Security</a></li>
                                 <li><a href="#">Software Policy</a></li>
