@@ -29,7 +29,8 @@
 
             array(
                 'id'        =>  'footer_left_first_widget_short_desc',
-                'type'      =>  'editor',
+                'type'      =>  'textarea',
+                'rows'      =>  3,
                 'title'     =>  __('Logo', $xisen_textdomain),
             ),
         )
