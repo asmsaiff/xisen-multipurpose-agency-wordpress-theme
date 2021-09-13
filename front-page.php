@@ -4,9 +4,6 @@
 
 <main>
 <!-- Start Slider Area -->
-    <?php
-
-    ?>
     <section class="slider-area header-bg fix">
         <div class="slider-shape">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape1.png" alt="" class="shape shape-1">
