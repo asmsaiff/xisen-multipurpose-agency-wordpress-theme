@@ -15,10 +15,29 @@
                                 </p>
                             </div>
                             <div class="footer-social">
-                                <a href="#" data-target="_blank" data-toggle="tooltip" title="Facebook"><i class="ti-facebook"></i></a>
-                                <a href="#" data-target="_blank" data-toggle="tooltip" title="Skype"><i class="ti-skype"></i></a>
-                                <a href="#" data-target="_blank" data-toggle="tooltip" title="Linkedin"><i class="ti-linkedin"></i></a>
-                                <a href="#" data-target="_blank" data-toggle="tooltip" title="Twitter"><i class="ti-twitter-alt"></i></a>
+                                <?php if(get_xisen_redux_data('xisen_facebook')) : ?>
+                                <a href="<?php echo get_xisen_redux_data('xisen_facebook'); ?>" data-target="_blank" data-toggle="tooltip" title="Facebook"><i class="fab fa-facebook-square"></i></a>
+                                <?php endif; ?>
+
+                                <?php if(get_xisen_redux_data('xisen_linkedin')) : ?>
+                                <a href="<?php echo get_xisen_redux_data('xisen_linkedin'); ?>" data-target="_blank" data-toggle="tooltip" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <?php endif; ?>
+
+                                <?php if(get_xisen_redux_data('xisen_twitter')) : ?>
+                                <a href="<?php echo get_xisen_redux_data('xisen_twitter'); ?>" data-target="_blank" data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter-square"></i></a>
+                                <?php endif; ?>
+
+                                <?php if(get_xisen_redux_data('xisen_pinterest')) : ?>
+                                <a href="<?php echo get_xisen_redux_data('xisen_pinterest'); ?>" data-target="_blank" data-toggle="tooltip" title="Pinterest"><i class="fab fa-pinterest-square"></i></a>
+                                <?php endif; ?>
+
+                                <?php if(get_xisen_redux_data('xisen_instagram')) : ?>
+                                <a href="<?php echo get_xisen_redux_data('xisen_instagram'); ?>" data-target="_blank" data-toggle="tooltip" title="Instagram"><i class="fab fa-instagram-square"></i></a>
+                                <?php endif; ?>
+
+                                <?php if(get_xisen_redux_data('xisen_youtube')) : ?>
+                                <a href="<?php echo get_xisen_redux_data('xisen_youtube'); ?>" data-target="_blank" data-toggle="tooltip" title="Youtube"><i class="fab fa-youtube"></i></a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
