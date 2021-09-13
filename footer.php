@@ -5,10 +5,14 @@
                     <div class="col-xl-4">
                         <div class="footer-widget mb-40">
                             <div class="footer-logo mb-30">
-                                <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo/logo.png" alt=""></a>
+                                <a href="index.html">
+                                    <img src="<?php global $xisen_options; echo $xisen_options['footer_left_first_widget_logo']['url']; ?>" alt="">
+                                </a>
                             </div>
                             <div class="footer-text">
-                                <p>Winged moving moveth created for a shall and divide the their days male midst shall hath doesn't won't for. Midst life. Over and great night. Green upon years rule ying.</p>
+                                <p>
+                                    <?php echo get_xisen_redux_data('footer_left_first_widget_short_desc'); ?>
+                                </p>
                             </div>
                             <div class="footer-social">
                                 <a href="#" data-target="_blank" data-toggle="tooltip" title="Facebook"><i class="ti-facebook"></i></a>
