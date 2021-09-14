@@ -18,6 +18,7 @@
     require_once(get_theme_file_path( '/inc/custom-fields/contact-form-shortcode.php' ));
     require_once(get_theme_file_path( '/inc/custom-fields/xisen-faq.php' ));
     require_once(get_theme_file_path( '/inc/custom-fields/working-process.php' ));
+    require_once(get_theme_file_path( '/inc/custom-fields/about-page-testimonials.php' ));
 
     // Theme Setup
     function xisen_theme_setup() {
@@ -40,6 +41,11 @@
 
         $locations = array(
             'main_menu'             =>  __('Primary Menu', 'xisen'),
+            'footer_second_menu'    =>  __('Footer Second Widget Area Menu', 'xisen'),
+            'footer_third_menu'     =>  __('Footer Third Widget Area Menu', 'xisen'),
+            'footer_fourth_menu'    =>  __('Footer Fourth Widget Area Menu', 'xisen'),
+            'footer_last_menu'      =>  __('Footer Last Widget Area Menu', 'xisen'),
+            'footer_menu'           =>  __('Footer Menu', 'xisen'),
         );
         register_nav_menus($locations);
     }

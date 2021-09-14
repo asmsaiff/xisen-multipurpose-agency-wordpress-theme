@@ -91,9 +91,10 @@
                             echo $xisen_primary_menu;
                         ?>
                     </div>
+                    
                     <div class="col-lg-2 d-none d-lg-block">
                         <div class="header-btn text-right">
-                            <a href="#" class="btn border-btn">Sign up</a>
+                            <a href="<?php echo get_xisen_redux_data('button_url'); ?>" class="btn border-btn"><?php echo get_xisen_redux_data('button_label'); ?></a>
                         </div>
                     </div>
                 </div>
