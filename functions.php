@@ -45,6 +45,7 @@
             'footer_third_menu'     =>  __('Footer Third Widget Area Menu', 'xisen'),
             'footer_fourth_menu'    =>  __('Footer Fourth Widget Area Menu', 'xisen'),
             'footer_last_menu'      =>  __('Footer Last Widget Area Menu', 'xisen'),
+            'footer_menu'           =>  __('Footer Menu', 'xisen'),
         );
         register_nav_menus($locations);
     }

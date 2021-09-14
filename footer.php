@@ -99,16 +99,17 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="copyright-text">
-                                <span>Copyright © 2019 Xisen. All rights reserved</span>
+                                <span><?php echo get_xisen_redux_data('footer_copyright'); ?></span>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="footer-menu text-left text-md-right">
-                                <ul>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Tips &amp; Tricks</a></li>
-                                    <li><a href="#">Service</a></li>
-                                </ul>
+                                <?php
+                                    wp_nav_menu(array(
+                                        'theme_location'        =>  'footer_menu',
+                                        'container'             =>  'ul'
+                                    ));
+                                ?>
                             </div>
                         </div>
                     </div>
