@@ -28,10 +28,21 @@
                             <?php echo get_xisen_redux_data('contact_page_form_section_short_desc'); ?>
                         </p>
                         <div class="contact-social mt-30">
-                            <a class="fb" href="#" target="_blank" data-toggle="tooltip" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a class="ld" href="#" target="_blank" data-toggle="tooltip" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="tw" href="#" target="_blank" data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a class="pin" href="#" target="_blank" data-toggle="tooltip" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                            <?php if(get_xisen_redux_data('xisen_facebook')) : ?>
+                            <a class="fb" href="<?php echo get_xisen_redux_data('xisen_facebook'); ?>" target="_blank" data-toggle="tooltip" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <?php endif; ?>
+
+                            <?php if(get_xisen_redux_data('xisen_linkedin')) : ?>
+                            <a class="ld" href="<?php echo get_xisen_redux_data('xisen_linkedin'); ?>" target="_blank" data-toggle="tooltip" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            <?php endif; ?>
+
+                            <?php if(get_xisen_redux_data('xisen_twitter')) : ?>
+                            <a class="tw" href="<?php echo get_xisen_redux_data('xisen_twitter'); ?>" target="_blank" data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <?php endif; ?>
+
+                            <?php if(get_xisen_redux_data('xisen_pinterest')) : ?>
+                            <a class="pin" href="<?php echo get_xisen_redux_data('xisen_pinterest'); ?>" target="_blank" data-toggle="tooltip" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
