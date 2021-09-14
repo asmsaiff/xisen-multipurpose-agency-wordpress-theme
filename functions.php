@@ -41,6 +41,10 @@
 
         $locations = array(
             'main_menu'             =>  __('Primary Menu', 'xisen'),
+            'footer_second_menu'    =>  __('Footer Second Widget Area Menu', 'xisen'),
+            'footer_third_menu'     =>  __('Footer Third Widget Area Menu', 'xisen'),
+            'footer_fourth_menu'    =>  __('Footer Fourth Widget Area Menu', 'xisen'),
+            'footer_last_menu'      =>  __('Footer Last Widget Area Menu', 'xisen'),
         );
         register_nav_menus($locations);
     }

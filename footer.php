@@ -6,12 +6,12 @@
                         <div class="footer-widget mb-40">
                             <div class="footer-logo mb-30">
                                 <a href="index.html">
-                                    <img src="<?php global $xisen_options; echo $xisen_options['footer_left_first_widget_logo']['url']; ?>" alt="">
+                                    <img src="<?php global $xisen_options; echo $xisen_options['footer_first_widget_logo']['url']; ?>" alt="">
                                 </a>
                             </div>
                             <div class="footer-text">
                                 <p>
-                                    <?php echo get_xisen_redux_data('footer_left_first_widget_short_desc'); ?>
+                                    <?php echo get_xisen_redux_data('footer_first_widget_short_desc'); ?>
                                 </p>
                             </div>
                             <div class="footer-social">
@@ -43,50 +43,51 @@
                     </div>
                     <div class="col-xl-2 col-lg-3 col-md-6">
                         <div class="footer-widget mb-40">
-                            <h3><?php _e('About Us', 'xisen'); ?></h3>
-                            <ul class="footer-links">
-                                <li><a href="#">Managed Website</a></li>
-                                <li><a href="#">Manage Reputation</a></li>
-                                <li><a href="#">Power Tools</a></li>
-                                <li><a href="#">Marketing Service</a></li>
-                                <li><a href="#"> Customer Service</a></li>
-                            </ul>
+                            <h3><?php echo get_xisen_redux_data('footer_second_widget_title'); ?></h3>
+
+                            <?php
+                                wp_nav_menu(array(
+                                    'theme_location'        =>  'footer_second_menu',
+                                    'menu_class'            =>  'footer-links',
+                                    'container'        =>  'ul'
+                                ));
+                            ?>
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-3 col-md-6">
                         <div class="footer-widget mb-40">
-                            <h3><?php _e('Quick Links', 'xisen'); ?></h3>
-                            <ul class="footer-links">
-                                <li><a href="#">Store Hours</a></li>
-                                <li><a href="#">Brand Assets</a></li>
-                                <li><a href="#"> Investor Relations</a></li>
-                                <li><a href="#">Terms of Service</a></li>
-                                <li><a href="#">  Privacy & Policy</a></li>
-                            </ul>
+                            <h3><?php echo get_xisen_redux_data('footer_third_widget_title'); ?></h3>
+                            <?php
+                                wp_nav_menu(array(
+                                    'theme_location'        =>  'footer_third_menu',
+                                    'menu_class'            =>  'footer-links',
+                                    'container'        =>  'ul'
+                                ));
+                            ?>
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-3 col-md-6">
                         <div class="footer-widget mb-40">
-                            <h3><?php _e('My Account', 'xisen'); ?></h3>
-                            <ul class="footer-links">
-                                <li><a href="#">Press Inquiries</a></li>
-                                <li><a href="#">Media</a></li>
-                                <li><a href="#">Directories</a></li>
-                                <li><a href="#">Investor</a></li>
-                                <li><a href="#"> Relations</a></li>
-                            </ul>
+                            <h3><?php echo get_xisen_redux_data('footer_fourth_widget_title'); ?></h3>
+                            <?php
+                                wp_nav_menu(array(
+                                    'theme_location'        =>  'footer_fourth_menu',
+                                    'menu_class'            =>  'footer-links',
+                                    'container'        =>  'ul'
+                                ));
+                            ?>
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-3 col-md-6">
                         <div class="footer-widget mb-40">
-                            <h3><?php _e('Resources', 'xisen'); ?></h3>
-                            <ul class="footer-links">
-                                <li><a href="#">Application Security</a></li>
-                                <li><a href="#">Software Policy</a></li>
-                                <li><a href="#">Supply Chain</a></li>
-                                <li><a href="#"> Agencies Relation</a></li>
-                                <li><a href="#">  Manage Reputation</a></li>
-                            </ul>
+                            <h3><?php echo get_xisen_redux_data('footer_fifth_widget_title'); ?></h3>
+                            <?php
+                                wp_nav_menu(array(
+                                    'theme_location'        =>  'footer_last_menu',
+                                    'menu_class'            =>  'footer-links',
+                                    'container'        =>  'ul'
+                                ));
+                            ?>
                         </div>
                     </div>
                 </div>
