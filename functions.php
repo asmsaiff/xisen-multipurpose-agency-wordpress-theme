@@ -11,6 +11,10 @@
     require_once(get_theme_file_path( '/inc/custom-post-types/xisen-software-features.php' ));
     require_once(get_theme_file_path( '/inc/custom-post-types/xisen-testimonial.php' ));
     require_once(get_theme_file_path( '/inc/custom-post-types/xisen-faq.php' ));
+    require_once(get_theme_file_path( '/inc/custom-post-types/xisen-portfolio.php' ));
+
+    // Custom Taxonomy
+    require_once(get_theme_file_path( '/inc/custom-taxonomy/portfolio-taxonomy.php' ));
 
     // Custom Fields
     require_once(get_theme_file_path( '/inc/custom-fields/pricing-plan-features.php' ));
