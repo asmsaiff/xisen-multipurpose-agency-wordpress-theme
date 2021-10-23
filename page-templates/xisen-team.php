@@ -16,8 +16,8 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
                 <div class="section-title-5 mb-70 text-center">
-                    <h2>Experienced Team Member</h2>
-                    <p>Him have deep brought life darkness firmament unto move</p>
+                    <h2><?php echo get_xisen_redux_data('team_section_title'); ?></h2>
+                    <p><?php echo get_xisen_redux_data('team_section_para'); ?></p>
                 </div>
             </div>
         </div>
