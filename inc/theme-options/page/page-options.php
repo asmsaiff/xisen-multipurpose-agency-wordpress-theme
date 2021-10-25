@@ -145,7 +145,7 @@
         'fields' => array(
             array(
                 'type'      =>  'raw',
-                'title'     =>  __('Form Area', $$xisen_textdomain),
+                'title'     =>  __('Form Area', $xisen_textdomain),
             ),
             array(
                 'id'        =>  'contact_page_form_section_title',
@@ -185,7 +185,7 @@
         'fields' => array(
             array(
                 'type'      =>  'raw',
-                'title'     =>  __('Feature Area', $$xisen_textdomain),
+                'title'     =>  __('Feature Area', $xisen_textdomain),
             ),
             array(
                 'id'        =>  'about_page_form_section_title',
@@ -215,7 +215,7 @@
 
             array(
                 'type'      =>  'raw',
-                'title'     =>  __('Soft List Area', $$xisen_textdomain),
+                'title'     =>  __('Soft List Area', $xisen_textdomain),
             ),
             array(
                 'id'        =>  'about_page_soft_list_area_title',
@@ -244,7 +244,7 @@
 
             array(
                 'type'      =>  'raw',
-                'title'     =>  __('About Page Testimonials', $$xisen_textdomain),
+                'title'     =>  __('About Page Testimonials', $xisen_textdomain),
             ),
             array(
                 'id'        =>  'about_page_testimonial_section_title',
@@ -261,7 +261,7 @@
 
             array(
                 'type'      =>  'raw',
-                'title'     =>  __('About Page Brand Area', $$xisen_textdomain),
+                'title'     =>  __('About Page Brand Area', $xisen_textdomain),
             ),
             array(
                 'id'        =>  'about_page_brand_area_title',
@@ -293,19 +293,19 @@
         'fields' => array(
             array(
                 'type'      =>  'raw',
-                'title'     =>  __('Section Header', $$xisen_textdomain),
+                'title'     =>  __('Section Header', $xisen_textdomain),
             ),
 
             array(
                 'id'        =>  'team_section_title',
                 'type'      =>  'text',
-                'title'     =>  __('Section title', $$xisen_textdomain),
+                'title'     =>  __('Section title', $xisen_textdomain),
             ),
 
             array(
                 'id'        =>  'team_section_para',
                 'type'      =>  'editor',
-                'title'     =>  __('Section short description', $$xisen_textdomain),
+                'title'     =>  __('Section short description', $xisen_textdomain),
             ),
         )
     ) );

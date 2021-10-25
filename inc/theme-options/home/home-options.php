@@ -233,21 +233,7 @@
         )
     ) );
 
-    Redux::setSection( $opt_name, array(
-        'title'  => esc_html__( 'Brand Slider', $xisen_textdomain ),
-        'id'     => 'home_brand_slider',
-        'desc'   => esc_html__( 'Brand Slider Section', $xisen_textdomain ),
-        // 'icon'   => 'el el-th-large',
-		'subsection'	=>	true,
-        'fields' => array(
-            array(
-                'id'       => 'home_brand_slider_items',
-                'type'     => 'gallery',
-                'title'    => esc_html__( 'Brand Logos', $xisen_textdomain ),
-                'desc'     => esc_html__( 'Select all brand logos', $xisen_textdomain ),
-			),
-        )
-    ) );
+    
 
     Redux::setSection( $opt_name, array(
         'title'  => esc_html__( 'Mail Collection Form', $xisen_textdomain ),

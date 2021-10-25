@@ -14,11 +14,26 @@
                 <div class="row text-center">
                     <div class="col-12">
                         <div class="portfolio-menu mb-40">
-                            <button class="active" data-filter="*">See all</button>
-                            <button data-filter=".cat1">Branding</button>
-                            <button data-filter=".cat2">Creative</button>
-                            <button data-filter=".cat3">illustration</button>
-                            <button data-filter=".cat4">photoshop</button>
+                            <button class="active" data-filter="*"><?php echo  esc_html('All','xisen');?></button>
+                            <?php
+                                $xisen_portfolio_posts = new WP_Query(array(
+                                    'post_type'     =>  'xisen_portfolio'
+                                ));
+                            
+                                $terms = get_terms( array(
+                                    'taxonomy' => 'category',
+                                    'hide_empty'=> 1,
+                                    'orderby' => 'name',
+                                    'order' => 'ASC'
+                                ) );
+                        
+                                foreach($terms as $category) {   
+                            ?>
+                            <!-- <button type="button" class="control" data-filter=".cat">Cat</button> -->
+                            <button data-filter=".<?php echo $category->slug; ?>"><?php echo $category->name; ?></button>
+                            <?php 
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>
