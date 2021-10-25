@@ -293,19 +293,19 @@
         'fields' => array(
             array(
                 'type'      =>  'raw',
-                'title'     =>  __('Section Header', $$xisen_textdomain),
+                'title'     =>  __('Section Header', $xisen_textdomain),
             ),
 
             array(
                 'id'        =>  'team_section_title',
                 'type'      =>  'text',
-                'title'     =>  __('Section title', $$xisen_textdomain),
+                'title'     =>  __('Section title', $xisen_textdomain),
             ),
 
             array(
                 'id'        =>  'team_section_para',
                 'type'      =>  'editor',
-                'title'     =>  __('Section short description', $$xisen_textdomain),
+                'title'     =>  __('Section short description', $xisen_textdomain),
             ),
         )
     ) );
