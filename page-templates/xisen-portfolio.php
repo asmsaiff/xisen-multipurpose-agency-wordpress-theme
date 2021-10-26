@@ -17,22 +17,34 @@
                             <button class="active" data-filter="*"><?php echo  esc_html('All','xisen');?></button>
                             <?php
                                 $xisen_portfolio_posts = new WP_Query(array(
-                                    'post_type'     =>  'xisen_portfolio'
+                                    'post_type' => 'xisen_portfolio',
                                 ));
-                            
-                                $terms = get_terms( array(
-                                    'taxonomy' => 'category',
-                                    'hide_empty'=> 1,
-                                    'orderby' => 'name',
-                                    'order' => 'ASC'
-                                ) );
-                        
-                                foreach($terms as $category) {   
+
+                                $portfolio_post_data = [];
+
+                                while($xisen_portfolio_posts->have_posts()) {
+                                    $xisen_portfolio_posts->the_post();
+
+                                    the_category();
+                                    the_title();
+
+
+                                    $portfolio_post_data[] = array(
+                                        'title' => get_the_title(),
+                                        'excerpt'   =>  get_the_excerpt(),
+                                        'content'   =>  get_the_content(),
+                                        'category'  =>  get_the_category_list()
+                                    );
+                                }
+
+                                for($i = 0; $i < count($portfolio_post_data); $i++) {
+                                    echo $portfolio_post_data[0]['category'];
+                                }
                             ?>
                             <!-- <button type="button" class="control" data-filter=".cat">Cat</button> -->
-                            <button data-filter=".<?php echo $category->slug; ?>"><?php echo $category->name; ?></button>
+                            <button data-filter=".<?php //echo $category->slug; ?>"><?php //echo $category->name; ?></button>
                             <?php 
-                                }
+                                
                             ?>
                         </div>
                     </div>
