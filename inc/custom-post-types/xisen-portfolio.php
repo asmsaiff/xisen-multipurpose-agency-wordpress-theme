@@ -47,6 +47,7 @@
             "menu_icon" => "dashicons-portfolio",
             "supports" => [ "title", "editor", "thumbnail" ],
             "show_in_graphql" => false,
+            "taxonomies" => array('xisen_portfolio_category')
         ];
 
         register_post_type( "xisen_portfolio", $args );
