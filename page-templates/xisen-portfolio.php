@@ -22,7 +22,7 @@
                                 ) );
 
                                 foreach ($terms as $term) {
-                                    echo '<button data-filter=".' . $term->slug . '">' . $term->name . '</button>';
+                                    echo '<button data-filter=".' . $term->slug . '">' . $term->name . '</button>'; 
                                 }
                             ?>
                         </div>
