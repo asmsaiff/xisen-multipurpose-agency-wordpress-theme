@@ -5,13 +5,13 @@
          */
 
         $labels = [
-            "name" => __( "Portfolio Categories", "xisen" ),
+            "name" => __( "Projects Categories", "xisen" ),
             "singular_name" => __( "Portfolio Category", "xisen" ),
         ];
 
         
         $args = [
-            "label" => __( "Portfolio Categories", "xisen" ),
+            "label" => __( "Projects Categories", "xisen" ),
             "labels" => $labels,
             "public" => true,
             "publicly_queryable" => true,
