@@ -29,132 +29,50 @@
                     </div>
                 </div>
                 <div class="row grid">
-                    <div class="col-lg-4 col-md-6 grid-item text-center cat4 cat2">
+                    <?php
+                        $args = array(
+                            'post_type' => 'xisen_portfolio',
+                            'posts_per_page' => -1,
+                            'orderby' => 'date',
+                            'order' => 'DESC',
+                        );
+
+                        $xisen_portfolio_items = new WP_Query($args);
+
+                        if ($xisen_portfolio_items->have_posts()) :
+                            while ($xisen_portfolio_items->have_posts()) :
+                                $xisen_portfolio_items->the_post();
+                                $terms = get_the_terms(get_the_ID(), 'xisen_portfolio_category');
+                                $terms_slug = array();
+
+                                if (!empty($terms)) {
+                                    foreach ($terms as $term) {
+                                        $terms_slug[] = $term->slug;
+                                    }
+                                }
+
+                                $terms_slug = implode(' ', $terms_slug);
+
+                    ?>
+
+                    <div class="col-lg-4 col-md-6 grid-item text-center <?php echo $terms_slug; ?>">
                         <div class="single-portfolio mb-30">
                             <div class="portfolio-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/01.jpg" alt="">
+                                <?php the_post_thumbnail("large"); ?>
                             </div>
                             <div class="portfolio-text">
                                 <div class="portfolio-view">
-                                    <a class="popup-img" href="assets/img/portfolio/01.jpg" ><i class="ti-plus"></i></a>
+                                    <a class="popup-img" href="<?php the_post_thumbnail_url(); ?>"><i class="ti-plus"></i></a>
                                 </div>
-                                <h3><a href="#">Creative Design</a></h3>
+                                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <span>Digital Art</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 grid-item text-center cat3 cat4">
-                        <div class="single-portfolio mb-30">
-                            <div class="portfolio-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/02.jpg" alt="">
-                            </div>
-                            <div class="portfolio-text">
-                                <div class="portfolio-view">
-                                    <a class="popup-img" href="assets/img/portfolio/02.jpg" ><i class="ti-plus"></i></a>
-                                </div>
-                                <h3><a href="#">Creative Design</a></h3>
-                                <span>Digital Art</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 grid-item text-center cat3 cat1">
-                        <div class="single-portfolio mb-30">
-                            <div class="portfolio-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/03.jpg" alt="">
-                            </div>
-                            <div class="portfolio-text">
-                                <div class="portfolio-view">
-                                    <a class="popup-img" href="assets/img/portfolio/03.jpg" ><i class="ti-plus"></i></a>
-                                </div>
-                                <h3><a href="#">Creative Design</a></h3>
-                                <span>Digital Art</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 grid-item text-center cat1 cat2">
-                        <div class="single-portfolio mb-30">
-                            <div class="portfolio-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/04.jpg" alt="">
-                            </div>
-                            <div class="portfolio-text">
-                                <div class="portfolio-view">
-                                    <a class="popup-img" href="assets/img/portfolio/04.jpg" ><i class="ti-plus"></i></a>
-                                </div>
-                                <h3><a href="#">Creative Design</a></h3>
-                                <span>Digital Art</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 grid-item text-center cat2 cat1">
-                        <div class="single-portfolio mb-30">
-                            <div class="portfolio-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/05.jpg" alt="">
-                            </div>
-                            <div class="portfolio-text">
-                                <div class="portfolio-view">
-                                    <a class="popup-img" href="assets/img/portfolio/05.jpg" ><i class="ti-plus"></i></a>
-                                </div>
-                                <h3><a href="#">Creative Design</a></h3>
-                                <span>Digital Art</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 grid-item text-center cat2 cat4">
-                        <div class="single-portfolio mb-30">
-                            <div class="portfolio-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/06.jpg" alt="">
-                            </div>
-                            <div class="portfolio-text">
-                                <div class="portfolio-view">
-                                    <a class="popup-img" href="assets/img/portfolio/06.jpg" ><i class="ti-plus"></i></a>
-                                </div>
-                                <h3><a href="#">Creative Design</a></h3>
-                                <span>Digital Art</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 grid-item text-center cat1 cat3">
-                        <div class="single-portfolio mb-30">
-                            <div class="portfolio-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/07.jpg" alt="">
-                            </div>
-                            <div class="portfolio-text">
-                                <div class="portfolio-view">
-                                    <a class="popup-img" href="assets/img/portfolio/07.jpg" ><i class="ti-plus"></i></a>
-                                </div>
-                                <h3><a href="#">Creative Design</a></h3>
-                                <span>Digital Art</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 grid-item text-center cat2 cat3">
-                        <div class="single-portfolio mb-30">
-                            <div class="portfolio-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/08.jpg" alt="">
-                            </div>
-                            <div class="portfolio-text">
-                                <div class="portfolio-view">
-                                    <a class="popup-img" href="assets/img/portfolio/08.jpg" ><i class="ti-plus"></i></a>
-                                </div>
-                                <h3><a href="#">Creative Design</a></h3>
-                                <span>Digital Art</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 grid-item text-center cat1 cat2">
-                        <div class="single-portfolio mb-30">
-                            <div class="portfolio-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/09.jpg" alt="">
-                            </div>
-                            <div class="portfolio-text">
-                                <div class="portfolio-view">
-                                    <a class="popup-img" href="assets/img/portfolio/09.jpg" ><i class="ti-plus"></i></a>
-                                </div>
-                                <h3><a href="#">Creative Design</a></h3>
-                                <span>Digital Art</span>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                            endwhile;
+                        endif;
+                    ?>
                 </div>
             </div>
         </section>

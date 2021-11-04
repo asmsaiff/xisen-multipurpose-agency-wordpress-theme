@@ -1,5 +1,6 @@
 <?php
     get_header();
+    the_post();
 ?>
 
 <main>
@@ -10,9 +11,7 @@
                 <div class="row">
                     <div class="col-lg-8 order-lg-2">
                         <div class="portfolio-details mb-40">
-                            <h2>Limited Edition</h2>
-                            <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.The attributed some to an unknown typesetter in the 15th century eu who is thought to have scrambled parts of Cicero'sDe lorem. Malorum for use in a type specimen book. Ionsectetur adipiscing elit.Nullam posuere elementum orci, vel sagittis ante. Donec a congue eros. Ut sem arcu, convallis in varius nec, bibendum eget libero. Suspendisse lobortis luctus orci,</p>
-                            <p>Behold living. Creeping gathered give sea third multiply midst winged tree bring wherein living itsmoving our him dry female his lights herb. in viverra ante sagittis vel. Fusce sit amet facilisis lorem, eget pellentesque turpis. Aliquam placerat elit urna, vel sagittis velit condimentum.</p>
+                            <?php the_content(); ?>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -87,7 +86,7 @@
                 <div class="col-12">
                     <div class="single-portfolio">
                         <div class="portfolio-img grad-overlay">
-                            <img src="assets/img/portfolio/m-01.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/m-01.jpg" alt="">
                             <div class="port-view">
                                 <a class="popup-img" href="assets/img/portfolio/m-01.jpg"><i class="fas fa-search"></i></a>
                                 <a class="port-link" href="portfolio-single-1.html"><i class="fas fa-link"></i></a>
@@ -99,7 +98,7 @@
                 <div class="col-12">
                     <div class="single-portfolio">
                         <div class="portfolio-img grad-overlay">
-                            <img src="assets/img/portfolio/m-02.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/m-02.jpg" alt="">
                             <div class="port-view">
                                 <a class="popup-img" href="assets/img/portfolio/m-02.jpg"><i class="fas fa-search"></i></a>
                                 <a class="port-link" href="portfolio-single-1.html"><i class="fas fa-link"></i></a>
@@ -111,7 +110,7 @@
                 <div class="col-12">
                     <div class="single-portfolio">
                         <div class="portfolio-img grad-overlay">
-                            <img src="assets/img/portfolio/m-03.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/m-03.jpg" alt="">
                             <div class="port-view">
                                 <a class="popup-img" href="assets/img/portfolio/m-03.jpg"><i class="fas fa-search"></i></a>
                                 <a class="port-link" href="portfolio-single-1.html"><i class="fas fa-link"></i></a>
@@ -123,7 +122,7 @@
                 <div class="col-12">
                     <div class="single-portfolio">
                         <div class="portfolio-img grad-overlay">
-                            <img src="assets/img/portfolio/m-04.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/m-04.jpg" alt="">
                             <div class="port-view">
                                 <a class="popup-img" href="assets/img/portfolio/m-04.jpg"><i class="fas fa-search"></i></a>
                                 <a class="port-link" href="portfolio-single-1.html"><i class="fas fa-link"></i></a>
@@ -135,7 +134,7 @@
                 <div class="col-12">
                     <div class="single-portfolio">
                         <div class="portfolio-img grad-overlay">
-                            <img src="assets/img/portfolio/m-05.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/m-05.jpg" alt="">
                             <div class="port-view">
                                 <a class="popup-img" href="assets/img/portfolio/m-05.jpg"><i class="fas fa-search"></i></a>
                                 <a class="port-link" href="portfolio-single-1.html"><i class="fas fa-link"></i></a>
@@ -147,7 +146,7 @@
                 <div class="col-12">
                     <div class="single-portfolio">
                         <div class="portfolio-img grad-overlay">
-                            <img src="assets/img/portfolio/m-06.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/m-06.jpg" alt="">
                             <div class="port-view">
                                 <a class="popup-img" href="assets/img/portfolio/m-06.jpg"><i class="fas fa-search"></i></a>
                                 <a class="port-link" href="portfolio-single-1.html"><i class="fas fa-link"></i></a>
