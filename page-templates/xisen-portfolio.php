@@ -14,11 +14,17 @@
                 <div class="row text-center">
                     <div class="col-12">
                         <div class="portfolio-menu mb-40">
-                            <button class="active" data-filter="*">See all</button>
-                            <button data-filter=".cat1">Branding</button>
-                            <button data-filter=".cat2">Creative</button>
-                            <button data-filter=".cat3">illustration</button>
-                            <button data-filter=".cat4">photoshop</button>
+                            <button class="active" data-filter="*">all</button>
+                            <?php
+                                $terms = get_terms( array(
+                                    'taxonomy' => 'xisen_portfolio_category',
+                                    'hide_empty' => false,
+                                ) );
+
+                                foreach ($terms as $term) {
+                                    echo '<button data-filter=".' . $term->slug . '">' . $term->name . '</button>';
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>
