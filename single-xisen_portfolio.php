@@ -11,7 +11,6 @@
                 <div class="row">
                     <div class="col-lg-8 order-lg-2">
                         <div class="portfolio-details mb-40">
-                            <h2><?php the_title(); ?></h2>
                             <?php the_content(); ?>
                         </div>
                     </div>
@@ -87,7 +86,7 @@
                 <div class="col-12">
                     <div class="single-portfolio">
                         <div class="portfolio-img grad-overlay">
-                            <img src="assets/img/portfolio/m-01.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/m-01.jpg" alt="">
                             <div class="port-view">
                                 <a class="popup-img" href="assets/img/portfolio/m-01.jpg"><i class="fas fa-search"></i></a>
                                 <a class="port-link" href="portfolio-single-1.html"><i class="fas fa-link"></i></a>
@@ -99,7 +98,7 @@
                 <div class="col-12">
                     <div class="single-portfolio">
                         <div class="portfolio-img grad-overlay">
-                            <img src="assets/img/portfolio/m-02.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/m-02.jpg" alt="">
                             <div class="port-view">
                                 <a class="popup-img" href="assets/img/portfolio/m-02.jpg"><i class="fas fa-search"></i></a>
                                 <a class="port-link" href="portfolio-single-1.html"><i class="fas fa-link"></i></a>
@@ -111,7 +110,7 @@
                 <div class="col-12">
                     <div class="single-portfolio">
                         <div class="portfolio-img grad-overlay">
-                            <img src="assets/img/portfolio/m-03.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/m-03.jpg" alt="">
                             <div class="port-view">
                                 <a class="popup-img" href="assets/img/portfolio/m-03.jpg"><i class="fas fa-search"></i></a>
                                 <a class="port-link" href="portfolio-single-1.html"><i class="fas fa-link"></i></a>
@@ -123,7 +122,7 @@
                 <div class="col-12">
                     <div class="single-portfolio">
                         <div class="portfolio-img grad-overlay">
-                            <img src="assets/img/portfolio/m-04.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/m-04.jpg" alt="">
                             <div class="port-view">
                                 <a class="popup-img" href="assets/img/portfolio/m-04.jpg"><i class="fas fa-search"></i></a>
                                 <a class="port-link" href="portfolio-single-1.html"><i class="fas fa-link"></i></a>
@@ -135,7 +134,7 @@
                 <div class="col-12">
                     <div class="single-portfolio">
                         <div class="portfolio-img grad-overlay">
-                            <img src="assets/img/portfolio/m-05.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/m-05.jpg" alt="">
                             <div class="port-view">
                                 <a class="popup-img" href="assets/img/portfolio/m-05.jpg"><i class="fas fa-search"></i></a>
                                 <a class="port-link" href="portfolio-single-1.html"><i class="fas fa-link"></i></a>
@@ -147,7 +146,7 @@
                 <div class="col-12">
                     <div class="single-portfolio">
                         <div class="portfolio-img grad-overlay">
-                            <img src="assets/img/portfolio/m-06.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portfolio/m-06.jpg" alt="">
                             <div class="port-view">
                                 <a class="popup-img" href="assets/img/portfolio/m-06.jpg"><i class="fas fa-search"></i></a>
                                 <a class="port-link" href="portfolio-single-1.html"><i class="fas fa-link"></i></a>
