@@ -11,7 +11,13 @@
                 <div class="row">
                     <div class="col-lg-8 order-lg-2">
                         <div class="portfolio-details mb-40">
-                            <?php the_content(); ?>
+                            <?php
+                                // if(has_post_thumbnail()) {
+                                //     the_post_thumbnail('full', array('class' => 'img-fluid mb-5'));
+                                // }
+
+                                the_content();
+                            ?>
                         </div>
                     </div>
                     <div class="col-lg-4">

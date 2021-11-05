@@ -24,6 +24,8 @@
     require_once(get_theme_file_path( '/inc/custom-fields/xisen-faq.php' ));
     require_once(get_theme_file_path( '/inc/custom-fields/working-process.php' ));
     require_once(get_theme_file_path( '/inc/custom-fields/about-page-testimonials.php' ));
+    require_once(get_theme_file_path( '/inc/custom-fields/portfolio-meta.php' ));
+    require_once(get_theme_file_path( '/inc/custom-fields/portfolio-meta.php' ));
 
     // Theme Setup
     function xisen_theme_setup() {
@@ -93,6 +95,7 @@
         wp_enqueue_script('isotope-js', get_template_directory_uri().'/assets/js/vendor/isotope.pkgd-3.0.5.min.js', null, time(), true);
         wp_enqueue_script('aos-js', get_template_directory_uri().'/assets/js/vendor/aos.js', array('jquery'), time(), true);
         wp_enqueue_script('main-js', get_template_directory_uri().'/assets/js/main.js', array('jquery'), time(), true);
+        wp_enqueue_script('app-js', get_template_directory_uri().'/assets/js/app.js', array('jquery'), time(), true);
     }
     add_action( 'wp_enqueue_scripts', 'xisen_assets_enqueue' );
 
