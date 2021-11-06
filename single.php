@@ -15,7 +15,7 @@
             <div class="row text-center">
                 <div class="col-md-12">
                     <div class="page-title page-title-2 mb-30">
-                        <h4>Blog Details</h4>
+                        <h4><?php the_title(); ?></h4>
                     </div>
                     <div class="breadcrumb-list breadcrumb-list-2 mb-30">
                         <?php get_the_breadcrumb(); ?>
@@ -37,12 +37,12 @@
                         <div class="blog-post-content">
                             <div class="blog-post-meta mb-15">
                                 <span><i class="far fa-calendar-check"></i><?php echo get_the_date(); ?></span>
-                                <span><a href="#"><i class="far fa-user"></i><?php the_author(); ?></a></span>
-                                <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
+                                <!-- <span><a href="<?php //echo esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ); ?>"><i class="far fa-user"></i><?php //the_author(); ?></a></span>
+                                <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span> -->
                             </div>
-                            <h3 class="post-title">
-                                <?php the_title(); ?>
-                            </h3>
+                            <!-- <h3 class="post-title">
+                                <?php //the_title(); ?>
+                            </h3> -->
                             <div class="post-text mb-50">
                                 <?php the_content(); ?>
                             </div>
@@ -59,11 +59,9 @@
                                 <div class="blog-share-icon text-left text-md-right">
                                     <span><?php _e('Share: ', 'xisen'); ?></span>
 
-                                    <a href="#" target="_blank" data-toggle="tooltip" title="Facebook" ><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" target="_blank" data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter"></i></a>
-                                    <a href="#" target="_blank" data-toggle="tooltip" title="Instagram"><i class="fab fa-instagram"></i></a>
-                                    <a href="#" target="_blank" data-toggle="tooltip" title="Google Plus"><i class="fab fa-google-plus-g"></i></a>
-                                    <a href="#" target="_blank" data-toggle="tooltip" title="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+                                    <a href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank" data-toggle="tooltip" title="Facebook" ><i class="fab fa-facebook-f"></i></a>
+
+                                    <a href="http://www.twitter.com/share?url=<?php the_permalink(); ?>" target="_blank" data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +94,7 @@
                                 <?php endif; ?>
                             </div>
                         </div>
-                        <div class="author mt-80 mb-40">
+                        <!-- <div class="author mt-80 mb-40">
                             <div class="autor-img text-center">
                                 <?php echo get_avatar( get_the_author_meta( "ID" ) ); ?>
                             </div>
@@ -110,8 +108,9 @@
                                     <a href="#" target="_blank" data-toggle="tooltip" title="Instagram"><i class="fab fa-instagram"></i></a>
                                     <a href="#" target="_blank" data-toggle="tooltip" title="Vimeo"><i class="fab fa-vimeo-v"></i></a>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa aute irure dolor.</p>
+                                <p>
+                                    <?php the_author_meta('description'); ?>
+                                </p>
                             </div>
                         </div>
                         <div class="related-post">
@@ -251,7 +250,7 @@
                                     </div>
                                 </div>
                             </form>
-                        </div>
+                        </div> -->
                     </article>
                 </div>
                 <div class="col-lg-4">

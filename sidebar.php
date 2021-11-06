@@ -1,12 +1,12 @@
 <div class="blog-widget mb-50">
-    <form action="#" class="search-form">
-        <input type="text" name="Search" id="search" placeholder="Search your keyword...">
-        <button type="submit"><i class="fas fa-search"></i></button>
+    <form class="search-form" action="<?php bloginfo( 'url' ); ?>/">
+        <input type="text" name="s" id="search" placeholder="<?php _e('Search your keyword...', 'xisen'); ?>" value="<?php the_search_query(); ?>">
+        <button type="submit" id="searchsubmit"><i class="fas fa-search"></i></button>
     </form>
 </div>
 <div class="blog-widget mb-50">
     <div class="widget-title mb-40">
-        <h3>Recent Post</h3>
+        <h3><?php _e('Recent Post', 'xisen'); ?></h3>
     </div>
     <ul class="recent-post">
         <?php
@@ -21,7 +21,7 @@
         ?>
         <li>
             <div class="r-post-img">
-                <a href="#">
+                <a href="<?php the_permalink(); ?>">
                     <?php if(has_post_thumbnail()) : the_post_thumbnail(); endif; ?>
                 </a>
             </div>
@@ -37,7 +37,7 @@
         ?>
     </ul>
 </div>
-<div class="blog-widget mb-50">
+<!-- <div class="blog-widget mb-50">
     <div class="widget-title mb-40">
         <h3>Categories</h3>
     </div>
@@ -48,36 +48,30 @@
         <li><a href="$">Branding  <span class="f-right">85</span></a></li>
         <li><a href="$">Web design <span class="f-right">05</span></a></li>
     </ul>
-</div>
+</div> -->
 <div class="blog-widget mb-50">
     <div class="widget-title mb-40">
         <h3>Social Profile</h3>
     </div>
     <div class="social-profile">
-        <a href="#" data-target="_blank" data-toggle="tooltip" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" data-target="_blank" data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" data-target="_blank" data-toggle="tooltip" title="Behance"><i class="fab fa-behance"></i></a>
-        <a href="#" data-target="_blank" data-toggle="tooltip" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" data-target="_blank" data-toggle="tooltip" title="Youtube"><i class="fab fa-youtube"></i></a>
+        <?php if(get_xisen_redux_data('xisen_facebook')) : ?>
+        <a class="fb" href="<?php echo get_xisen_redux_data('xisen_facebook'); ?>" target="_blank" data-toggle="tooltip" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <?php endif; ?>
+
+        <?php if(get_xisen_redux_data('xisen_linkedin')) : ?>
+        <a class="ld" href="<?php echo get_xisen_redux_data('xisen_linkedin'); ?>" target="_blank" data-toggle="tooltip" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <?php endif; ?>
+
+        <?php if(get_xisen_redux_data('xisen_twitter')) : ?>
+        <a class="tw" href="<?php echo get_xisen_redux_data('xisen_twitter'); ?>" target="_blank" data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <?php endif; ?>
+
+        <?php if(get_xisen_redux_data('xisen_pinterest')) : ?>
+        <a class="pin" href="<?php echo get_xisen_redux_data('xisen_pinterest'); ?>" target="_blank" data-toggle="tooltip" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        <?php endif; ?>
     </div>
 </div>
-<div class="blog-widget mb-50">
-    <div class="widget-title mb-40">
-        <h3>Instagram Feeds</h3>
-    </div>
-    <ul class="insta-list">
-        <li><a href="#"><img src="assets/img/blog/img1.jpg" alt=""></a></li>
-        <li><a href="#"><img src="assets/img/blog/img2.jpg" alt=""></a></li>
-        <li><a href="#"><img src="assets/img/blog/img3.jpg" alt=""></a></li>
-        <li><a href="#"><img src="assets/img/blog/img4.jpg" alt=""></a></li>
-        <li><a href="#"><img src="assets/img/blog/img5.jpg" alt=""></a></li>
-        <li><a href="#"><img src="assets/img/blog/img6.jpg" alt=""></a></li>
-        <li><a href="#"><img src="assets/img/blog/img7.jpg" alt=""></a></li>
-        <li><a href="#"><img src="assets/img/blog/img8.jpg" alt=""></a></li>
-        <li><a href="#"><img src="assets/img/blog/img9.jpg" alt=""></a></li>
-    </ul>
-</div>
-<div class="blog-widget mb-50">
+<!-- <div class="blog-widget mb-50">
     <div class="widget-title mb-40">
         <h3>Popular Tags</h3>
     </div>
@@ -94,7 +88,7 @@
         <a href="#">kit</a>
         <a href="#">tech</a>
     </div>
-</div>
+</div> -->
 <div class="blog-widget mb-50">
     <div class="banner-img">
         <a href="#"><img src="assets/img/banner/banner.jpg" alt=""></a>

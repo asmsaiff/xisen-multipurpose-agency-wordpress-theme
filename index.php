@@ -48,8 +48,8 @@
                         <?php endif; ?>
                         <div class="blog-post-content">
                             <div class="blog-post-meta mb-15">
-                                <span><a href="#"><i class="far fa-user"></i><?php the_author(); ?></a></span>
-                                <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
+                                <span><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ); ?>"><i class="far fa-user"></i><?php the_author(); ?></a></span>
+                                <!-- <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span> -->
                             </div>
                             <h3 class="post-title post-title-sm">
                                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -72,14 +72,16 @@
             <div class="row">
                 <div class="col-12">
                     <div class="basic-pagination mb-40 text-center">
-                        <ul>
+                        <!-- <ul>
                             <li><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
                             <li class="active"><a href="#">01</a></li>
                             <li><a href="#">02</a></li>
                             <li><a href="#">03</a></li>
                             <li><a href="#"><i class="fas fa-ellipsis-h"></i></a></li>
                             <li><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
-                        </ul>
+                        </ul> -->
+
+                        <?php xisen_pagination(); ?>
                     </div>
                 </div>
             </div>

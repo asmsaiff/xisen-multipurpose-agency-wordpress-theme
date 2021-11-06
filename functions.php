@@ -156,3 +156,21 @@
         elseif (is_home()) { echo '<span style="color: #fff;"><i class="fas fa-home"></i> Home  / </span>'; echo'<li class="active">Blog'; echo'</li>';}
         echo '</ul>';
     }
+
+    // Pagination
+    if ( ! function_exists( "xisen_pagination" ) ) {
+	function xisen_pagination() {
+		global $wp_query;
+		$links = paginate_links( array(
+			'current'  => max( 1, get_query_var( 'paged' ) ),
+			'total'    => $wp_query->max_num_pages,
+			'type'     => 'list',
+			'mid_size' => apply_filters( "xisen_pagination_mid_size", 3 )
+		) );
+		$links = str_replace( "<ul class='page-numbers'>", "<ul>", $links );
+		$links = str_replace( '<li><span aria-current="page" class="page-numbers current">', '<li class="active"><span aria-current="page" class="page-numbers current">', $links );
+		$links = str_replace( "Next &raquo;", '<i class="fas fa-angle-double-right"></i>', $links );
+		$links = str_replace( "&laquo; Previous", '<i class="fas fa-angle-double-left"></i>', $links );
+		echo $links ;
+	}
+}
