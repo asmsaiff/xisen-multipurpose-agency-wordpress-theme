@@ -59,11 +59,9 @@
                                 <div class="blog-share-icon text-left text-md-right">
                                     <span><?php _e('Share: ', 'xisen'); ?></span>
 
-                                    <a href="#" target="_blank" data-toggle="tooltip" title="Facebook" ><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" target="_blank" data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter"></i></a>
-                                    <a href="#" target="_blank" data-toggle="tooltip" title="Instagram"><i class="fab fa-instagram"></i></a>
-                                    <a href="#" target="_blank" data-toggle="tooltip" title="Google Plus"><i class="fab fa-google-plus-g"></i></a>
-                                    <a href="#" target="_blank" data-toggle="tooltip" title="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+                                    <a href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank" data-toggle="tooltip" title="Facebook" ><i class="fab fa-facebook-f"></i></a>
+
+                                    <a href="http://www.twitter.com/share?url=<?php the_permalink(); ?>" target="_blank" data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +94,7 @@
                                 <?php endif; ?>
                             </div>
                         </div>
-                        <div class="author mt-80 mb-40">
+                        <!-- <div class="author mt-80 mb-40">
                             <div class="autor-img text-center">
                                 <?php echo get_avatar( get_the_author_meta( "ID" ) ); ?>
                             </div>
@@ -110,8 +108,9 @@
                                     <a href="#" target="_blank" data-toggle="tooltip" title="Instagram"><i class="fab fa-instagram"></i></a>
                                     <a href="#" target="_blank" data-toggle="tooltip" title="Vimeo"><i class="fab fa-vimeo-v"></i></a>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa aute irure dolor.</p>
+                                <p>
+                                    <?php the_author_meta('description'); ?>
+                                </p>
                             </div>
                         </div>
                         <div class="related-post">
@@ -251,7 +250,7 @@
                                     </div>
                                 </div>
                             </form>
-                        </div>
+                        </div> -->
                     </article>
                 </div>
                 <div class="col-lg-4">
