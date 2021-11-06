@@ -309,30 +309,3 @@
             ),
         )
     ) );
-
-
-    // About Page
-    Redux::setSection( $opt_name, array(
-        'title'  => esc_html__( 'Our Team Page', $xisen_textdomain ),
-        'id'     => 'our_team',
-        // 'icon'   => 'el el-th-large',
-        'subsection'    =>  true,
-        'fields' => array(
-            array(
-                'type'      =>  'raw',
-                'title'     =>  __('Section Header', $xisen_textdomain),
-            ),
-
-            array(
-                'id'        =>  'team_section_title',
-                'type'      =>  'text',
-                'title'     =>  __('Section title', $xisen_textdomain),
-            ),
-
-            array(
-                'id'        =>  'team_section_para',
-                'type'      =>  'editor',
-                'title'     =>  __('Section short description', $xisen_textdomain),
-            ),
-        )
-    ) );
