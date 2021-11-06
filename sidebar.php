@@ -21,7 +21,7 @@
         ?>
         <li>
             <div class="r-post-img">
-                <a href="#">
+                <a href="<?php the_permalink(); ?>">
                     <?php if(has_post_thumbnail()) : the_post_thumbnail(); endif; ?>
                 </a>
             </div>
