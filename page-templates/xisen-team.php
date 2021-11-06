@@ -163,71 +163,7 @@
 </section>
 <!-- End Team Area -->
 
-<!-- Start Brands Area -->
-<section class="brand-area pt-140  pb-90 position-relative">
-    <div class="shape-slider">
-        <img class="shape shape-1 shape-5-1 " src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape-tr-2.png" alt="">
-        <img class="shape shape-5 " src="<?php echo get_template_directory_uri(); ?>/assets/img/shape/shape-c-1.png" alt="">
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 offset-lg-3">
-                <div class="section-title-2 mb-70 text-center">
-                    <h2 class="mb-20">Trusted over 100+ companies</h2>
-                    <p>Him have deep brought life darkness firmament unto move</p>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="logo-brand-item">
-                <div class="brand-img">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/01.png" alt=""></a>
-                </div>
-            </div>
-            <div class="logo-brand-item">
-                <div class="brand-img">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/02.png" alt=""></a>
-                </div>
-            </div>
-            <div class="logo-brand-item">
-                <div class="brand-img">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/03.png" alt=""></a>
-                </div>
-            </div>
-            <div class="logo-brand-item">
-                <div class="brand-img">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/03 (1).png" alt=""></a>
-                </div>
-            </div>
-            <div class="logo-brand-item">
-                <div class="brand-img">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/04.png" alt=""></a>
-                </div>
-            </div>
-            <div class="logo-brand-item">
-                <div class="brand-img">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/05.png" alt=""></a>
-                </div>
-            </div>
-            <div class="logo-brand-item">
-                <div class="brand-img">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/03.png" alt=""></a>
-                </div>
-            </div>
-            <div class="logo-brand-item">
-                <div class="brand-img">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/03 (1).png" alt=""></a>
-                </div>
-            </div>
-            <div class="logo-brand-item">
-                <div class="brand-img">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/brand/02.png" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Brands Area -->
+<?php get_template_part('template-parts/common/page-brand', 'logo'); ?>
 </main>
 
 <?php
