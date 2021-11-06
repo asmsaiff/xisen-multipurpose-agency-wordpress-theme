@@ -72,14 +72,16 @@
             <div class="row">
                 <div class="col-12">
                     <div class="basic-pagination mb-40 text-center">
-                        <ul>
+                        <!-- <ul>
                             <li><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
                             <li class="active"><a href="#">01</a></li>
                             <li><a href="#">02</a></li>
                             <li><a href="#">03</a></li>
                             <li><a href="#"><i class="fas fa-ellipsis-h"></i></a></li>
                             <li><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
-                        </ul>
+                        </ul> -->
+
+                        <?php xisen_pagination(); ?>
                     </div>
                 </div>
             </div>

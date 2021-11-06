@@ -2210,7 +2210,7 @@ input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], in
         margin: 0 5px;
     }
     
-    .basic-pagination ul li a {
+    .basic-pagination ul li a, .basic-pagination ul li span {
         background: transparent;
         height: 50px;
         width: 50px;
@@ -2226,7 +2226,7 @@ input:focus[type="url"], input:focus[type="text"], input:focus[type="email"], in
         font-family: var(--font-pop);
     }
     
-    .basic-pagination ul li.active a, .basic-pagination ul li:hover a {
+    .basic-pagination ul li.active span, .basic-pagination ul li:hover a {
         background: #fe4536;
         border-color: #fe4536;
         color: #fff;
