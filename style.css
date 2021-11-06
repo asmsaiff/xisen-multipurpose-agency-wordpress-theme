@@ -22,3 +22,8 @@
     font:14px Helvetica,Arial,sans-serif;
     width:100%;
 }
+
+.team-img img {
+    width: 270px;
+    height: 270px;
+}

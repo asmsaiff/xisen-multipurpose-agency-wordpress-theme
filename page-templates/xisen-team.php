@@ -11,6 +11,13 @@
 <?php get_template_part('template-parts/common/page', 'header'); ?>
 
 <!-- Start Team Area -->
+<?php
+    $args = array(
+        'post_type' => 'xisen_team',
+    );
+    $xisen_team_member = new WP_Query( $args );
+    if ( $xisen_team_member->have_posts() ) :
+?>
 <section class="team-area pt-140">
     <div class="container">
         <div class="row">
@@ -22,146 +29,44 @@
             </div>
         </div>
         <div class="row">
+            <?php
+                while ( $xisen_team_member->have_posts() ) :
+                    $xisen_team_member->the_post();
+            ?>
             <div class="col-lg-3 col-md-6">
                 <div class="single-team-box text-center mb-30  wow fadeInUp" data-wow-delay=".3s">
                     <div class="team-img mb-25">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-1.jpg" alt="">
+                        <?php the_post_thumbnail('xisen-team-thumb'); ?>
                     </div>
                     <div class="team-text">
-                        <h4>Barbara Jackson</h4>
-                        <span>Web developer</span>
+                        <h4><?php the_title(); ?></h4>
+                        <span><?php the_field('team_member_designation'); ?></span>
                         <div class="team-icon">
-                            <a href="#"><i class="ti-google"></i></a>
-                            <a href="#"><i class="ti-instagram"></i></a>
-                            <a href="#"><i class="ti-twitter"></i></a>
-                            <a href="#"><i class="ti-tumblr"></i></a>
+                            <?php
+                                if( have_rows('social_media') ):
+                                    while( have_rows('social_media') ) : the_row();
+
+                                        $icon_class = get_sub_field('font_awesome_team_social_icon_class');
+                                        $social_media_link = get_sub_field('team_member_social_media_link');
+                            ?>
+                            <a href="<?php echo $social_media_link; ?>" target="_blank"><i class="<?php echo $icon_class; ?>"></i></a>
+                            <?php
+                                    endwhile;
+                                endif;
+                            ?>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-team-box text-center mb-30  wow fadeInUp" data-wow-delay=".5s">
-                    <div class="team-img mb-25">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-2.jpg" alt="">
-                    </div>
-                    <div class="team-text">
-                        <h4>Garyse Perkins</h4>
-                        <span>Web Designer</span>
-                        <div class="team-icon">
-                            <a href="#"><i class="ti-google"></i></a>
-                            <a href="#"><i class="ti-instagram"></i></a>
-                            <a href="#"><i class="ti-twitter"></i></a>
-                            <a href="#"><i class="ti-tumblr"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-team-box text-center mb-30  wow fadeInUp" data-wow-delay=".7s">
-                    <div class="team-img mb-25">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-3.jpg" alt="">
-                    </div>
-                    <div class="team-text">
-                        <h4>Liver Ratingson</h4>
-                        <span>Marketing Guru</span>
-                        <div class="team-icon">
-                            <a href="#"><i class="ti-google"></i></a>
-                            <a href="#"><i class="ti-instagram"></i></a>
-                            <a href="#"><i class="ti-twitter"></i></a>
-                            <a href="#"><i class="ti-tumblr"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-team-box text-center mb-30  wow fadeInUp" data-wow-delay=".9s">
-                    <div class="team-img mb-25">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-4.jpg" alt="">
-                    </div>
-                    <div class="team-text">
-                        <h4>Alina Ratisan</h4>
-                        <span>Web developer</span>
-                        <div class="team-icon">
-                            <a href="#"><i class="ti-google"></i></a>
-                            <a href="#"><i class="ti-instagram"></i></a>
-                            <a href="#"><i class="ti-twitter"></i></a>
-                            <a href="#"><i class="ti-tumblr"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-team-box text-center mb-30  wow fadeInUp" data-wow-delay=".3s">
-                    <div class="team-img mb-25">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-05.jpg" alt="">
-                    </div>
-                    <div class="team-text">
-                        <h4>Jerry Williamson</h4>
-                        <span>Web developer</span>
-                        <div class="team-icon">
-                            <a href="#"><i class="ti-google"></i></a>
-                            <a href="#"><i class="ti-instagram"></i></a>
-                            <a href="#"><i class="ti-twitter"></i></a>
-                            <a href="#"><i class="ti-tumblr"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-team-box text-center mb-30  wow fadeInUp" data-wow-delay=".5s">
-                    <div class="team-img mb-25">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-06.jpg" alt="">
-                    </div>
-                    <div class="team-text">
-                        <h4>Michael Mendez</h4>
-                        <span>Web Designer</span>
-                        <div class="team-icon">
-                            <a href="#"><i class="ti-google"></i></a>
-                            <a href="#"><i class="ti-instagram"></i></a>
-                            <a href="#"><i class="ti-twitter"></i></a>
-                            <a href="#"><i class="ti-tumblr"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-team-box text-center mb-30  wow fadeInUp" data-wow-delay=".7s">
-                    <div class="team-img mb-25">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-07.jpg" alt="">
-                    </div>
-                    <div class="team-text">
-                        <h4>Masud Hasan</h4>
-                        <span>Marketing Guru</span>
-                        <div class="team-icon">
-                            <a href="#"><i class="ti-google"></i></a>
-                            <a href="#"><i class="ti-instagram"></i></a>
-                            <a href="#"><i class="ti-twitter"></i></a>
-                            <a href="#"><i class="ti-tumblr"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-team-box text-center mb-30  wow fadeInUp" data-wow-delay=".9s">
-                    <div class="team-img mb-25">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/team-08.jpg" alt="">
-                    </div>
-                    <div class="team-text">
-                        <h4>Tanvir Ahamed</h4>
-                        <span>Web developer</span>
-                        <div class="team-icon">
-                            <a href="#"><i class="ti-google"></i></a>
-                            <a href="#"><i class="ti-instagram"></i></a>
-                            <a href="#"><i class="ti-twitter"></i></a>
-                            <a href="#"><i class="ti-tumblr"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php
+                endwhile;
+                wp_reset_postdata();
+            ?>
         </div>
     </div>
 </section>
 <!-- End Team Area -->
+<?php endif; ?>
 
 <?php get_template_part('template-parts/common/page-brand', 'logo'); ?>
 </main>
