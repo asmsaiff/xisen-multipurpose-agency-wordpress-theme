@@ -15,7 +15,7 @@
             <div class="row text-center">
                 <div class="col-md-12">
                     <div class="page-title page-title-2 mb-30">
-                        <h4>Blog Details</h4>
+                        <h4><?php the_title(); ?></h4>
                     </div>
                     <div class="breadcrumb-list breadcrumb-list-2 mb-30">
                         <?php get_the_breadcrumb(); ?>
@@ -37,12 +37,12 @@
                         <div class="blog-post-content">
                             <div class="blog-post-meta mb-15">
                                 <span><i class="far fa-calendar-check"></i><?php echo get_the_date(); ?></span>
-                                <span><a href="#"><i class="far fa-user"></i><?php the_author(); ?></a></span>
-                                <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
+                                <!-- <span><a href="<?php //echo esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ); ?>"><i class="far fa-user"></i><?php //the_author(); ?></a></span>
+                                <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span> -->
                             </div>
-                            <h3 class="post-title">
-                                <?php the_title(); ?>
-                            </h3>
+                            <!-- <h3 class="post-title">
+                                <?php //the_title(); ?>
+                            </h3> -->
                             <div class="post-text mb-50">
                                 <?php the_content(); ?>
                             </div>
